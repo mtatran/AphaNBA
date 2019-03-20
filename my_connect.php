@@ -3,9 +3,9 @@
 function get_mysqli_conn()
 {
 $dbhost = 'localhost';
-$dbuser = 'mtatran';
-$dbpassword = 'passwordmel';
-$dbname = 'mtatran';
+$dbuser = 'r2abdall';
+$dbpassword = 'H3lloRola!@#%^&';
+$dbname = 'r2abdall';
 $mysqli = new mysqli($dbhost, $dbuser, $dbpassword, $dbname);
 if ($mysqli->connect_errno)
 {
