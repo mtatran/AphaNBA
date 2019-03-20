@@ -1,9 +1,9 @@
 <?php
 // (1) Connection parameters
 $dbhost = 'mansci-db.uwaterloo.ca';
-$dbuser = 'mtatran';
-$dbpassword = 'passwordmel';
-$dbname = 'mtatran';
+$dbuser = 'r2abdall';
+$dbpassword = 'H3lloRola!@#%^&';
+$dbname = 'r2abdall';
 // (2) mysqli connection variable
 $mysqli = new mysqli($dbhost, $dbuser, $dbpassword, $dbname);
 if ($mysqli->connect_errno)
