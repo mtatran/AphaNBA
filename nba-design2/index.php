@@ -126,41 +126,6 @@
          </div>
          <div class="divider"></div>
          <div class="section">
-           <?php
-           // Enable error logging:
-           error_reporting(E_ALL ^ E_NOTICE);
-           // mysqli connection via user-defined function
-           include ('./my_connect.php');
-           $mysqli = get_mysqli_conn();
-           ?>
-
-           <?php
-           $sql = "SELECT players.player_name, players.minutes_played "
-           	. "FROM players "
-           	. "WHERE players.player_name='Aaron Gordon'";
-           // Prepared statement, stage 1: prepare
-           $stmt = $mysqli->prepare($sql);
-           // Prepared statement, stage 2: execute
-           $stmt->execute();
-           // Bind result variables
-           $stmt->bind_result($player_name,$minutes_played);
-           /* fetch values */
-
-         	echo '<p3>';
-         	echo '<ul>';
-         	while($stmt->fetch()) {
-         		printf('<li>%s</li>', $player_name);
-         	}
-         	echo '</ul>';
-         echo '</p3>';
-
-         echo '<a href="index1.php">Join</a>';
-         echo '<a href="index1.php">Join</a>';echo '<a href="index1.php">Join</a>';echo '<a href="index1.php">Join</a>';echo '<a href="index1.php">Join</a>';echo '<a href="index1.php">Join</a>';echo '<a href="index1.php">Join</a>';echo '<a href="index1.php">Join</a>';echo '<a href="index1.php">Join</a>';
-           /* close statement and connection*/
-           $stmt->close();
-           $mysqli->close();
-           ?>
-
 
            <p>Stuff</p>
          </div>
