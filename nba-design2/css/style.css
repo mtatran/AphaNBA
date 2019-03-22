@@ -6,10 +6,7 @@
  * Made By MaterializeCSS.com
  */
 
- table,tr,th,td
- {
-     border: 1px solid black;
- }
+
 .card-panel {
   width:50%;
 
