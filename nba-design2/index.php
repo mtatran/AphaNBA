@@ -180,47 +180,10 @@
   echo '</div><br>';
   echo '</p>';
   /* close statement and connection*/
-  $memberId = 111111;
-  // SQL statement
-  $sql = "SELECT p.project_name, p.projects_Id, p.documentation "
-  	. "FROM work_on wo, projects p "
-  	. "WHERE wo.member_Id=".$memberId." AND wo.projects_Id=p.projects_Id";
-  $stmt = $mysqli->prepare($sql);
-  $stmt->execute();
-  $stmt->bind_result($project_name,$project_id,$project_documentation);
-  echo '<label for="aid">Your Projects and Tasks</label>';
-  echo '<a href="createproject.php">Create project</a>';
-  echo '<div name="aid">';
-  $something = array();
-  while ($stmt->fetch())
-  {
-  	$something[$project_id] = $project_name;
-  }
-  foreach($something as $id => $name) {
-  	$projectSql = "SELECT t.taskName"
-  	." FROM in_task it,has_task ht,task t"
-  	." WHERE ht.task_Id=it.task_Id AND it.member_Id=".$memberId." AND ht.projects_Id=".$id." AND it.task_id=t.task_id";
-  	$projectStmnt = $mysqli->prepare($projectSql);
-  	$projectStmnt->execute();
-  	$projectStmnt->bind_result($task_name);
-  	echo '<p>';
-  	printf ('<div>%s</div>', $name);
-    echo '<a class="waves-effect waves-light btn modal-trigger" href="projectoverview.php?project_id='.$id.'">+</a>';
-  	echo '</p>';
-  	echo '<p3>';
-  	echo '<ul>';
-  	while($projectStmnt->fetch()) {
-  		printf('<li>%s</li>', $task_name);
-  	}
-  	echo '</ul>';
-  echo '</p3>';
-  }
-  echo '</div><br>';
-  /* close statement and connection*/
   $stmt->close();
   $mysqli->close();
   ?>
-  
+
   <div class="footer-copyright">
     <div class="container">
     Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">AlphaBets</a>
