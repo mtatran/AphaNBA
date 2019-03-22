@@ -149,12 +149,85 @@
 
       </div>
     </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">AlphaBets</a>
-      </div>
+
+  <?php
+  // Enable error logging:
+  error_reporting(E_ALL ^ E_NOTICE);
+  // mysqli connection via user-defined function
+  include ('./my_connect.php');
+  $mysqli = get_mysqli_conn();
+  ?>
+
+  <?php
+  $sql = "SELECT t.teamName, t.team_Id "
+  	. "FROM team t, works_in wi "
+  	. "WHERE wi.member_Id=111111 AND wi.team_Id=t.team_Id";
+  // Prepared statement, stage 1: prepare
+  $stmt = $mysqli->prepare($sql);
+  // Prepared statement, stage 2: execute
+  $stmt->execute();
+  // Bind result variables
+  $stmt->bind_result($team_name,$team_Id);
+  /* fetch values */
+  echo '<label for="aid">Your Team(s)</label>';
+  echo '<a href="index2.php">Join</a>';
+  echo '<a href="createteam.php">Create</a>';
+  echo '<div name="aid">';
+  while ($stmt->fetch())
+  {
+    printf ('<a href="something.php?team_name='.$team_name.',team_id='.$team_Id.'" >%s</a>', $team_name);
+  }
+  echo '</div><br>';
+  echo '</p>';
+  /* close statement and connection*/
+  $memberId = 111111;
+  // SQL statement
+  $sql = "SELECT p.project_name, p.projects_Id, p.documentation "
+  	. "FROM work_on wo, projects p "
+  	. "WHERE wo.member_Id=".$memberId." AND wo.projects_Id=p.projects_Id";
+  $stmt = $mysqli->prepare($sql);
+  $stmt->execute();
+  $stmt->bind_result($project_name,$project_id,$project_documentation);
+  echo '<label for="aid">Your Projects and Tasks</label>';
+  echo '<a href="createproject.php">Create project</a>';
+  echo '<div name="aid">';
+  $something = array();
+  while ($stmt->fetch())
+  {
+  	$something[$project_id] = $project_name;
+  }
+  foreach($something as $id => $name) {
+  	$projectSql = "SELECT t.taskName"
+  	." FROM in_task it,has_task ht,task t"
+  	." WHERE ht.task_Id=it.task_Id AND it.member_Id=".$memberId." AND ht.projects_Id=".$id." AND it.task_id=t.task_id";
+  	$projectStmnt = $mysqli->prepare($projectSql);
+  	$projectStmnt->execute();
+  	$projectStmnt->bind_result($task_name);
+  	echo '<p>';
+  	printf ('<div>%s</div>', $name);
+    echo '<a class="waves-effect waves-light btn modal-trigger" href="projectoverview.php?project_id='.$id.'">+</a>';
+  	echo '</p>';
+  	echo '<p3>';
+  	echo '<ul>';
+  	while($projectStmnt->fetch()) {
+  		printf('<li>%s</li>', $task_name);
+  	}
+  	echo '</ul>';
+  echo '</p3>';
+  }
+  echo '</div><br>';
+  /* close statement and connection*/
+  $stmt->close();
+  $mysqli->close();
+  ?>
+  
+  <div class="footer-copyright">
+    <div class="container">
+    Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">AlphaBets</a>
     </div>
-  </footer>
+  </div>
+</footer>
+
 
 
   <!--  Scripts-->
