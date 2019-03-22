@@ -96,7 +96,58 @@
 
 
 <div class="section">
-<h5>Section 1</h5>
+  <h1>All Orders</h1>
+
+
+
+
+  <?php
+  session_start();
+
+  error_reporting(E_ALL ^ E_NOTICE);
+  // mysqli connection via user-defined function
+
+  include('./my_connect.php');
+  $mysqli = get_mysqli_conn();
+
+  //gets all users orders
+  $sql = "SELECT games.date_time, games.game_location, games.visitor_team, games.home_team FROM games WHERE games.date_time>CURRENT_DATE";
+  $search_result = mysqli_query($mysqli, $sql);
+
+  //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
+  ?>
+  
+
+
+
+      <table name="dataTable">
+          <tr>
+              <th>Date</th>
+              <th>location</th>
+              <th>visitor</th>
+              <th>home</th>
+          </tr>
+
+          <?php
+          $sum=0;
+          ?>
+          <!-- populate table from mysql database -->
+          <?php while($row = mysqli_fetch_array($search_result)):?>
+              <tr>
+               <!-- populate with names of columns in mysql database -->
+               <td><?php echo $row[date_time];?></td>
+               <td><?php echo $row[game_location];?></td>
+               <td><?php echo $row[visitor_team];?></td>
+
+               <td><?php echo $row[home_team];?></td>
+
+
+           </tr>
+
+       <?php endwhile;?>
+
+   </table>
+
 <p>Stuff</p>
 </div>
 <div class="divider"></div>
