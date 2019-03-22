@@ -238,7 +238,7 @@ $mysqli = get_mysqli_conn();
 
 <?php
 // SQL statement
-$sql = "SELECT t.teamName, t.team_Id "
+$sql = "SELECT games.date_time, games.game_location, games.visitor_team, games.home_team FROM games WHERE games.date_time>CURRENT_DATE ORDERBY games.date_time"
 	. "FROM team t, works_in wi "
 	. "WHERE wi.member_Id=111111 AND wi.team_Id=t.team_Id";
 // Prepared statement, stage 1: prepare
