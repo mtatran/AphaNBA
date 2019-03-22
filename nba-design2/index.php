@@ -167,18 +167,17 @@
   // Prepared statement, stage 2: execute
   $stmt->execute();
   // Bind result variables
-  $stmt->bind_result($team_name,$team_Id);
+  $stmt->bind_result($player_name,$minutes_played);
   /* fetch values */
-  echo '<label for="aid">Your Team(s)</label>';
-  echo '<a href="index2.php">Join</a>';
-  echo '<a href="createteam.php">Create</a>';
-  echo '<div name="aid">';
-  while ($stmt->fetch())
-  {
-    printf ('<a href="something.php?team_name='.$team_name.',team_id='.$team_Id.'" >%s</a>', $team_name);
-  }
-  echo '</div><br>';
-  echo '</p>';
+
+	echo '<p3>';
+	echo '<ul>';
+	while($stmt->fetch()) {
+		printf('<li>%s</li>', $player_name);
+	}
+	echo '</ul>';
+echo '</p3>';
+
   /* close statement and connection*/
   $stmt->close();
   $mysqli->close();
