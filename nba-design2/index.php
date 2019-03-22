@@ -177,7 +177,7 @@
 	}
 	echo '</ul>';
 echo '</p3>';
-
+echo '<h1>HELLOOOOOOOOOOOOOOO</h1>'
 
 echo '<a href="index.php">Join</a>';
 
@@ -190,8 +190,6 @@ echo '<a href="index1.php">Join</a>';
 echo '<a href="index1.php">Join</a>';
 
 echo '<a href="index1.php">Join</a>';
-
-
   /* close statement and connection*/
   $stmt->close();
   $mysqli->close();
