@@ -34,6 +34,9 @@
                 <th>Location</th>
                 <th>Visitor</th>
                 <th>Home</th>
+                <th>Compare</th>
+
+
             </tr>
 
             <?php
@@ -48,8 +51,9 @@
                  <td><?php echo $row[date_time];?></td>
                  <td><?php echo $row[game_location];?></td>
                  <td><?php echo $row[visitor_team];?></td>
-
                  <td><?php echo $row[home_team];?></td>
+                 <td> '<a class="waves-effect waves-light btn modal-trigger" href="projectoverview.php?project_id='.$id.'">+</a>'</td>;
+
 
 
              </tr>
