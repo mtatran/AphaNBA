@@ -48,11 +48,11 @@
                  <!-- populate with names of columns in mysql database -->
                  <td><?php echo $row[date_time];?></td>
                  <?php
-                 $row[date_time]= $date_time;
+                 $row[1]= $date_time;
                  ?>
                  <td><?php echo $row[game_location];?></td>
                  <?php
-                 $row[game_location]= $game_location;
+                 $row[1]= $game_location;
                  ?>
                  <td><?php echo $row[visitor_team];?></td>
                  <td><?php echo $row[home_team];?></td>
