@@ -100,7 +100,6 @@
 
 
 
-
   <?php
   session_start();
 
@@ -111,8 +110,8 @@
   $mysqli = get_mysqli_conn();
 
   //gets the date time and location from the href
-  $date_time = isset($_GET['date_time']) ? $_GET['date_time'] : false;
-  $game_location = isset($_GET['game_location']) ? $_GET['game_location'] : false;
+  $date_time = "hello"
+  $game_location = "hello";
 
   //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
 
