@@ -110,42 +110,20 @@
   include('./my_connect.php');
   $mysqli = get_mysqli_conn();
 
-  //gets all users orders
-  $sql = "SELECT games.date_time, games.game_location, games.visitor_team, games.home_team FROM games WHERE games.date_time>CURRENT_DATE";
-  $search_result = mysqli_query($mysqli, $sql);
+  //gets the date time and location from the href
+  $date_time = isset($_GET['date_time']) ? $_GET['date_time'] : false;
+  $game_location = isset($_GET['game_location']) ? $_GET['game_location'] : false;
 
   //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
+
+  if($date_time){
+    echo "hello"
+  }
+  if($game_location){
+    echo "yooo"
+  }
+
   ?>
-
-      <table name="dataTable">
-          <tr>
-              <th>Date</th>
-              <th>Location</th>
-              <th>Visitor</th>
-              <th>Home</th>
-          </tr>
-
-          <?php
-
-          $sum=0;
-
-          ?>
-          <!-- populate table from mysql database -->
-          <?php while($row = mysqli_fetch_array($search_result)):?>
-              <tr>
-               <!-- populate with names of columns in mysql database -->
-               <td><?php echo $row[date_time];?></td>
-               <td><?php echo $row[game_location];?></td>
-               <td><?php echo $row[visitor_team];?></td>
-
-               <td><?php echo $row[home_team];?></td>
-
-
-           </tr>
-
-       <?php endwhile;?>
-
-   </table>
 
 <p>Stuff</p>
 </div>
