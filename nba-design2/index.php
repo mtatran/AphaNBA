@@ -52,9 +52,9 @@
                  <td><?php echo $row[game_location];?></td>
                  <td><?php echo $row[visitor_team];?></td>
                  <td><?php echo $row[home_team];?></td>
-                 <td> <a class="waves-effect waves-light btn modal-trigger" href="projectoverview.php?project_id='.$id.'">+</a></td>
+                 <td> <a class="waves-effect waves-light btn modal-trigger" href="compareTeams.php?date_time='.$date_time.',game_location='.$game_location.'">+</a></td>
 
-
+                
 
              </tr>
 
