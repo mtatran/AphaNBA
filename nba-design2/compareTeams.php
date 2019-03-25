@@ -110,16 +110,16 @@
   $mysqli = get_mysqli_conn();
 
   //gets the date time and location from the href
-  $date_time = "hello"
+  $date_time = "hello";
   $game_location = "hello";
 
   //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
 
   if($date_time){
-    echo "hello"
+    echo "hello";
   }
   if($game_location){
-    echo "yooo"
+    echo "yooo";
   }
 
   ?>
