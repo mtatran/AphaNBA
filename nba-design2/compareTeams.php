@@ -116,10 +116,14 @@
   //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
 
   if($date_time){
-    echo "hello";
+    echo '<p>';
+	printf ('<div>%s</div>', $date_time);
+    echo '</p>';
   }
   if($game_location){
-    echo "yooo";
+    echo '<p>';
+	printf ('<div>%s</div>', $game_location);
+    echo '</p>';
   }
 
   ?>
