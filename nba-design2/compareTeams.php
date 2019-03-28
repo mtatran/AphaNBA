@@ -29,18 +29,27 @@
 <?php
 $visitor = isset($_GET['visitor_team']) ? $_GET['visitor_team'] : false;
 $home = isset($_GET['home_team']) ? $_GET['home_team'] : false;
- ?>
-        <h1 class="header center black-text" ><?phpif($visitor){
-          echo '<p>';
-        printf ('<div>%s</div>', $visitor);
-          echo '</p>';
+?>
+        <h1 class="header center black-text" >
+      <?php
+      $visitor = isset($_GET['visitor_team']) ? $_GET['visitor_team'] : false;
+
+       if($visitor){
+        //  echo '<p>';
+        printf ($visitor);
+          //echo '</p>';
         }
 
-        if($home){
-          echo '<p>';
-        printf ('<div>%s</div>', $home);
-          echo '</p>';
-        }?> vs. Raptors</h1>
+        ?> vs.
+<?php
+$home = isset($_GET['home_team']) ? $_GET['home_team'] : false;
+if($home){
+//  echo '<p>';
+printf ( $home);
+  //echo '</p>';
+}
+ ?>
+      </h1>
       <div class="row center">
         <h5 class="header col s12 light">Montreal Stadium, 7:00pm</h5>
       </div>
