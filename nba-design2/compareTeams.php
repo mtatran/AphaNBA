@@ -51,7 +51,29 @@ printf ( $home);
  ?>
       </h1>
       <div class="row center">
-        <h5 class="header col s12 light">Montreal Stadium, 7:00pm</h5>
+        <h5 class="header col s12 light">
+          <?php
+          $game_location = isset($_GET['game_location']) ? $_GET['game_location'] : false;
+
+
+          //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
+
+          if($game_location){
+
+          printf ($game_location);
+
+          }?>
+          ,       <?php
+                $date_time = isset($_GET['date_time']) ? $_GET['date_time'] : false;
+
+
+                //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
+
+                if($date_time){
+
+                printf ($date_time);
+
+                }?></h5>
       </div>
       <div align="center">
         <table class="striped" style>
