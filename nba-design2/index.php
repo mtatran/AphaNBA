@@ -22,7 +22,7 @@
     $mysqli = get_mysqli_conn();
 
     //gets all users orders
-    $sql = "SELECT games.date_time, games.game_location, games.visitor_team, games.home_team FROM games WHERE games.date_time>CURRENT_DATE";
+    $sql = "SELECT teamgame.date_time, teamgame.game_location, teamgame.visitor_team, teamgame.home_team FROM teamgame WHERE teamgame.date_time>CURRENT_DATE";
     $search_result = mysqli_query($mysqli, $sql);
 
     //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);

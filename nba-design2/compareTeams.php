@@ -113,6 +113,7 @@
   $date_time = isset($_GET['date_time']) ? $_GET['date_time'] : false;
   $game_location = isset($_GET['game_location']) ? $_GET['game_location'] : false;
 
+
   //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
 
   if($date_time){
@@ -126,9 +127,21 @@
     echo '</p>';
   }
 
+  //get the team info for the queries
+  $visitor_query= "SELECT teamgame.visitor_team FROM games WHERE teamgame.date_time='".$date_time."' AND teamgame.game_location = '".$game_location."'";
+  $search_result = mysqli_query($mysqli, $visitor_query);
   ?>
+  <?php while($row = mysqli_fetch_array($search_result)):?>
+      <tr>
+       <!-- populate with names of columns in mysql database -->
+       <td><?php echo $row[visitor_team];?></td>
 
-<p>Stuff</p>
+   </tr>
+
+<?php endwhile;?>
+
+
+<p>stuff</p>
 </div>
 <div class="divider"></div>
 <div class="section">
