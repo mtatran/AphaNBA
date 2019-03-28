@@ -47,55 +47,19 @@
                 <tr>
                  <!-- populate with names of columns in mysql database -->
                  <td><?php echo $row[date_time];?></td>
-                 <?php
-                 $row[1]= $date_time;
-                 ?>
+
                  <td><?php echo $row[game_location];?></td>
-                 <?php
-                 $row[1]= $game_location;
-                 ?>
+
                  <td><?php echo $row[visitor_team];?></td>
                  <td><?php echo $row[home_team];?></td>
-                 <td> <a class="waves-effect waves-light btn modal-trigger" href="compareTeams.php?date_time='.$date_time.',game_location='.$game_location.'">+</a></td>
-<?php
-                 echo '<p>';
-             	printf ('<div>%s</div>', $date_time);
-                 echo '</p>';
-?>
+                 <td> <a class="waves-effect waves-light btn modal-trigger" href="compareTeams.php?date_time='.$row[date_time].',game_location='.$row[game_location].'">+</a></td>
+
              </tr>
 
          <?php endwhile;?>
 
      </table>
 
-     while ($stmt->fetch())
-     {
-     	$something[$project_id] = $project_name;
-     }
-     foreach($something as $id => $name) {
-     	$projectSql = "SELECT t.taskName"
-     	." FROM in_task it,has_task ht,task t"
-     	." WHERE ht.task_Id=it.task_Id AND it.member_Id=".$memberId." AND ht.projects_Id=".$id." AND it.task_id=t.task_id";
-     	$projectStmnt = $mysqli->prepare($projectSql);
-     	$projectStmnt->execute();
-     	$projectStmnt->bind_result($task_name);
-     	echo '<p>';
-     	printf ('<div>%s</div>', $name);
-       echo '<a class="waves-effect waves-light btn modal-trigger" href="projectoverview.php?project_id='.$id.'">+</a>';
-     	echo '</p>';
-     	echo '<p3>';
-     	echo '<ul>';
-     	while($projectStmnt->fetch()) {
-     		printf('<li>%s</li>', $task_name);
-     	}
-     	echo '</ul>';
-     echo '</p3>';
-     }
-     echo '</div><br>';
-     /* close statement and connection*/
-     $stmt->close();
-     $mysqli->close();
-     ?>
 
 
 
