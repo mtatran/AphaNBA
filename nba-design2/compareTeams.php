@@ -34,11 +34,11 @@ $home = isset($_GET['home_team']) ? $_GET['home_team'] : false;
       <?php
       $visitor = isset($_GET['visitor_team']) ? $_GET['visitor_team'] : false;
 
-       if($visitor){
+       //if($visitor){
         //  echo '<p>';
         printf ($visitor);
           //echo '</p>';
-        }
+      //  }
 
         ?> vs.
 <?php
@@ -138,7 +138,7 @@ printf ( $home);
 <div class="row">
 <div class="col s6 push-s6">
 
-
+<!--  right side -->
 <div class="section">
   <h1>All Orders</h1>
 
@@ -170,19 +170,7 @@ printf ( $home);
 	printf ('<div>%s</div>', $game_location);
     echo '</p>';
   }
-
-  //get the team info for the queries
-  $visitor_query= "SELECT teamgame.visitor_team FROM games WHERE teamgame.date_time='".$date_time."' AND teamgame.game_location = '".$game_location."'";
-  $search_result = mysqli_query($mysqli, $visitor_query);
-  ?>
-  <?php while($row = mysqli_fetch_array($search_result)):?>
-      <tr>
-       <!-- populate with names of columns in mysql database -->
-       <td><?php echo $row[visitor_team];?></td>
-
-   </tr>
-
-<?php endwhile;?>
+?>
 
 
 <p>stuff</p>
@@ -202,6 +190,7 @@ printf ( $home);
 <div class="col s6 pull-s6">
 
 
+<!--  left side -->
          <div class="section">
            <h5>Games Played</h5>
            <h5>Team Points</h5>
