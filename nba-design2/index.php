@@ -54,10 +54,10 @@
                  <td><?php echo $row[home_team];?></td>
                  <td>
                    <?php echo
-                    '''
+                    "
                       <a class='waves-effect waves-light btn modal-trigger'
-                      href="compareTeams.php?date_time='''.$row[date_time].''',game_location='''.$row[game_location].'''">+</a>
-                    '''
+                      href='compareTeams.php?date_time=".$row[date_time]."&game_location=".$row[game_location]."'>+</a>
+                    "
                    ?>
                  </td>
 
