@@ -159,7 +159,7 @@
 
 
          <div class="section">
-           <h5>Games Played</h5>
+           <h5>visitor_team</h5>
            <h5>Team Points</h5>
            <p>Stuff</p>
          </div>
