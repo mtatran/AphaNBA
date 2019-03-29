@@ -27,10 +27,15 @@
 
     //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
     ?>
+    <nav class="white lighten-1" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="https://www.ticketmaster.ca/" class="brand-logo center"><img src="https://pbs.twimg.com/profile_images/1063091728398323712/zGJd2_dQ_400x400.jpg" alt="ticketmaster" height="50px" width="50px";/></a>
+        </div>
 
-      <div class="container centered center-align">
-
-        <table align="center" class="striped center-align">
+    </nav>
+    <div class="section no-pad-bot" id="index-banner">
+      <div class="container centered centered-align">
+        <table align="center" class="highlight center-align">
             <tr>
                 <th>Date</th>
                 <th>Location</th>
@@ -68,10 +73,6 @@
 
      </table>
    </div>
-
-
-
-
    </div>
 
 
