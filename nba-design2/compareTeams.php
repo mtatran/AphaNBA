@@ -23,7 +23,21 @@
   <nav class="white lighten-1" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="https://www.ticketmaster.ca/" class="brand-logo center"><img src="https://pbs.twimg.com/profile_images/1063091728398323712/zGJd2_dQ_400x400.jpg" alt="ticketmaster" height="50px" width="50px";/></a>
+<<<<<<< HEAD
+
+      <ul class="show-on-large">
+        <a id="logo-container" href="https://mansci-db.uwaterloo.ca/~r2abdall/nba-design2/index.php" class="sidenav"><img src="https://img.icons8.com/ios/50/000000/back-filled.png" alt="backbutton";/></a>
+      </ul>
+
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="https://mansci-db.uwaterloo.ca/~r2abdall/nba-design2/index.php">Back to Game Schedule</a></li>
+        <li style="color:red"><a href="#">Your Favorite Games</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><img src="https://img.icons8.com/color/48/000000/menu.png" alt="menu";/></a>
+=======
       <a id="logo-container" href="https://mansci-db.uwaterloo.ca/~r2abdall/nba-design2/index.php" class="brand-logo left"><img src="https://img.icons8.com/material/24/000000/circled-left--v3.png" alt="back-button";/></a>
+>>>>>>> ccded92253d1d3ed997c2034658323b4262e2f10
     </div>
 
   </nav>
@@ -329,6 +343,10 @@ printf ( $home);
           <h5 class="white-text">Index Information</h5>
 
           <p class="grey-text text-lighten-4">Learn More</p>
+<<<<<<< HEAD
+          <a href="https://mansci-db.uwaterloo.ca/~r2abdall/nba-design2/learnMore.php"></a>
+=======
+>>>>>>> ccded92253d1d3ed997c2034658323b4262e2f10
 
         </div>
 
