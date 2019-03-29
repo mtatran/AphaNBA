@@ -281,14 +281,7 @@ printf ( $home);
 
 <!--  left side -->
          <div class="section">
-           <h5><?php
-           $visitor = isset($_GET['visitor_team']) ? $_GET['visitor_team'] : false;
-           if($visitor){
-           //  echo '<p>';
-           printf ( $visitor);
-             //echo '</p>';
-           }
-            ?></h5>
+           <h5>visitor_team</h5>
            <h5>Team Points</h5>
            <p>Stuff</p>
          </div>
