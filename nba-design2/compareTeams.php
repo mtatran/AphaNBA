@@ -220,10 +220,8 @@ printf ( $home);
          }
   
          echo '<p>';
-         printf ('win:');
-         printf('<div>%s</div>', $win);
-         print ('loss:');
-         printf ('<div>%s</div>', $loss);
+         printf('win:','<div>%s</div>', $win);
+         printf ('loss:','<div>%s</div>', $loss);
          echo '</p>';
 ?>
 </h1>
