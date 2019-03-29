@@ -38,7 +38,10 @@
     include('./my_connect.php');
     $mysqli = get_mysqli_conn();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of d1bfa58... added js and css files for collapsible
 
     ?>
 
@@ -73,6 +76,7 @@ printf ( $home);
 
 
           if($game_location) {
+<<<<<<< HEAD
 
           printf ($game_location);
 
@@ -442,12 +446,89 @@ printf ( $home);
 
         $visitor = isset($_GET['visitor_team']) ? $_GET['visitor_team'] : false;
 
+=======
+
+          printf ($game_location);
+
+          }
+          ?>
+          ,       <?php
+                $date_time = isset($_GET['date_time']) ? $_GET['date_time'] : false;
+
+                if($date_time){
+
+                printf ($date_time);
+                printf (" EST");
+
+                }?></h5>
+      </div>
+      <div align="center">
+        <table class="striped" style>
+    <tbody>
+      <tr>
+        <td>+100</td>
+        <td>+100</td>
+        <td>-50</td>
+        <td>-50</td>
+      </tr>
+      <tr>
+        <td>+100</td>
+        <td>+100</td>
+        <td>-50</td>
+        <td>-50</td>
+      </tr>
+      <tr>
+        <td>+100</td>
+        <td>+100</td>
+        <td>-50</td>
+        <td>-50</td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+  </div>
+  <div class="row center">
+    <a href="https://www.bet365.com/en/" id="download-button" class="btn-large waves-effect waves-light">Bet</a>
+  </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+     <div class="row">
+       <div class="col s6 push-s6">
+         <div align="center">
+           <div class="card-panel white" align="center">
+
+
+             <?php
+
+             $home = isset($_GET['home_team']) ? $_GET['home_team'] : false;
+
+
+             $sql = "SELECT t.img_src "
+               . "FROM teams t "
+               . "WHERE t.team_name='".$home."'";
+             $search_result = mysqli_query($mysqli, $sql);
+
+             while ($row = mysqli_fetch_assoc($search_result))
+              {
+                 $home_img = $row[img_src];
+              }
+
+             echo "<span class='black-text'><img alt='Team1' width='75' height='75' src='".$home_img."'/></span>";
+             ?>
+>>>>>>> parent of d1bfa58... added js and css files for collapsible
 
         $sql = "SELECT t.img_src "
           . "FROM teams t "
           . "WHERE t.team_name='".$visitor."'";
         $search_result = mysqli_query($mysqli, $sql);
 
+<<<<<<< HEAD
         while ($row = mysqli_fetch_assoc($search_result))
          {
             $visitor_img = $row[img_src];
@@ -511,12 +592,51 @@ printf ( $home);
          echo '</p>';
 
 
+=======
+               </div>
+             </div>
+        </div>
+     <div class="col s6 pull-s6"> <div align="center">
 
-          while ($row = mysqli_fetch_assoc($search_result))
-           {
-              $visitor_img = $row[img_src];
-           }
+      <div class="card-panel white" align="center">
+        <?php
 
+        $visitor = isset($_GET['visitor_team']) ? $_GET['visitor_team'] : false;
+
+
+        $sql = "SELECT t.img_src "
+          . "FROM teams t "
+          . "WHERE t.team_name='".$visitor."'";
+        $search_result = mysqli_query($mysqli, $sql);
+
+        while ($row = mysqli_fetch_assoc($search_result))
+         {
+            $visitor_img = $row[img_src];
+         }
+
+        echo "<span class='black-text'><img alt='Team1' width='75' height='75' src='".$visitor_img."'/></span>";
+        ?>
+
+             </div></div>
+   </div>
+   </div>
+
+
+      <div class="divider"></div>
+<br />
+
+
+<div class="row">
+<div class="col s6 push-s6">
+>>>>>>> parent of d1bfa58... added js and css files for collapsible
+
+<!--  right side -->
+<div class="section">
+  <h1>
+    <?php
+    $home = isset($_GET['home_team']) ? $_GET['home_team'] : false;
+
+<<<<<<< HEAD
 =======
 <!--  right side -->
 <div class="section">
@@ -535,6 +655,34 @@ printf ( $home);
          {
             $win = $row[win];
             $loss = $row[loss];
+=======
+  //  echo '<p>';
+  printf ($home);
+    //echo '</p>';
+  $sql = "SELECT t.win, t.loss, t.games_played, t.team_points, t.team_FGA, t.team_FGM, t.FG_percent, t.team_FTA, t.team_FTM, t.team_FT_percent, t.team_3PTA, t.team_3PM, t.team_3PT_percent"
+  . "FROM teams t "
+  . "WHERE t.team_name='".$home."'";
+  $search_result = mysqli_query($mysqli, $sql);
+  while ($row = mysqli_fetch_assoc($search_result))
+         {
+            $win = $row[win];
+            $loss = $row[loss];
+
+         }
+         echo '<p>';
+         printf ('Win: %s', $win);
+         printf (' - Loss: %s', $loss);
+         /*echo '<br>';
+         printf('Games Played: %s', $played);
+         echo '<br>';
+         printf('Team Points: %s', $points);
+         echo '<br>';
+         printf ( 'FGA: %s', $FGA, ' | FGM: %s', $FGM, ' | FG%: %s', $FG);
+         */
+         echo '</p>';
+?>
+</h1>
+>>>>>>> parent of d1bfa58... added js and css files for collapsible
 
          }
          echo '<p>';
@@ -565,6 +713,7 @@ printf ( $home);
             $loss = $row[loss];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
          }
          echo '<p>';
          printf ('Win: %s', $win);
@@ -578,6 +727,8 @@ printf ( $home);
          */
          echo '</p>';
 ?>
+=======
+>>>>>>> parent of d1bfa58... added js and css files for collapsible
 =======
 >>>>>>> parent of d1bfa58... added js and css files for collapsible
 
@@ -599,6 +750,7 @@ printf ( $home);
     $home = isset($_GET['home_team']) ? $_GET['home_team'] : false;
 >>>>>>> parent of d1bfa58... added js and css files for collapsible
 
+<<<<<<< HEAD
   //  echo '<p>';
   printf ($home);
     //echo '</p>';
@@ -636,6 +788,15 @@ printf ( $home);
 
 
 >>>>>>> parent of d1bfa58... added js and css files for collapsible
+=======
+  <?php
+  /*
+  //gets the date time and location from the href
+  $date_time = isset($_GET['date_time']) ? $_GET['date_time'] : false;
+  $game_location = isset($_GET['game_location']) ? $_GET['game_location'] : false;
+
+
+>>>>>>> parent of d1bfa58... added js and css files for collapsible
   if($date_time){
     echo '<p>';
 //	printf ('<div>%s</div>', $date_time);
@@ -644,6 +805,9 @@ printf ( $home);
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of d1bfa58... added js and css files for collapsible
 =======
 >>>>>>> parent of d1bfa58... added js and css files for collapsible
 ?>
@@ -667,6 +831,7 @@ printf ( $home);
   <p>Players</p>
   <?php
 /*  session_start();
+<<<<<<< HEAD
 
   error_reporting(E_ALL ^ E_NOTICE);
   // mysqli connection via user-defined function
@@ -696,8 +861,13 @@ $search_result = mysqli_query($mysqli, $sql);
   //gets the date time and location from the href
   $date_time = isset($_GET['date_time']) ? $_GET['date_time'] : false;
   $game_location = isset($_GET['game_location']) ? $_GET['game_location'] : false;
+=======
+>>>>>>> parent of d1bfa58... added js and css files for collapsible
 
+  error_reporting(E_ALL ^ E_NOTICE);
+  // mysqli connection via user-defined function
 
+<<<<<<< HEAD
   if($date_time){
     echo '<p>';
 //	printf ('<div>%s</div>', $date_time);
@@ -706,11 +876,27 @@ $search_result = mysqli_query($mysqli, $sql);
 
 ?>
 >>>>>>> 2a1fa5b80cf5620844a2df850761ae85f67412fb
+=======
+  include('./my_connect.php');
+  $mysqli = get_mysqli_conn();*/
+?>
+
+</div>
+<?php
+$mysqli = get_mysqli_conn();
+$team="Atlanta Hawks";
+//gets all users orders
+$sql = "SELECT players.player_name, players.rebounds FROM players WHERE players.player_team = '".$team."'  ORDER BY players.rebounds DESC limit 5";
+$search_result = mysqli_query($mysqli, $sql);
+>>>>>>> parent of d1bfa58... added js and css files for collapsible
 
 //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
 ?>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of d1bfa58... added js and css files for collapsible
     <table name="dataTable" class="table2">
         <tr>
             <th>name</th>
@@ -723,6 +909,7 @@ $search_result = mysqli_query($mysqli, $sql);
             <tr>
              <!-- populate with names of columns in mysql database -->
              <td><?php echo $row[player_name];?></td>
+<<<<<<< HEAD
 
              <td><?php echo $row[rebounds];?></td>
 =======
@@ -795,6 +982,18 @@ $search_result = mysqli_query($mysqli, $sql);
  </table>
 
 >>>>>>> parent of d1bfa58... added js and css files for collapsible
+=======
+
+             <td><?php echo $row[rebounds];?></td>
+
+
+         </tr>
+
+     <?php endwhile;?>
+
+ </table>
+
+>>>>>>> parent of d1bfa58... added js and css files for collapsible
 <?php
  $mysqli = get_mysqli_conn();
  $team="Atlanta Hawks";
@@ -802,6 +1001,9 @@ $search_result = mysqli_query($mysqli, $sql);
  $sql = "SELECT players.player_name, players.assists FROM players WHERE players.player_team = '".$team."'  ORDER BY players.assists DESC limit 5";
  $search_result = mysqli_query($mysqli, $sql);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of d1bfa58... added js and css files for collapsible
 
  //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
  ?>
@@ -810,6 +1012,7 @@ $search_result = mysqli_query($mysqli, $sql);
          <tr>
              <th>name</th>
              <th>assists</th>
+<<<<<<< HEAD
 
          </tr>
 
@@ -894,8 +1097,16 @@ $search_result = mysqli_query($mysqli, $sql);
               <td><?php echo $row[player_name];?></td>
 
               <td><?php echo $row[assists];?></td>
+=======
 
+         </tr>
 
+         <?php
+>>>>>>> parent of d1bfa58... added js and css files for collapsible
+
+       //  $sum=0;
+
+<<<<<<< HEAD
           </tr>
 
       <?php endwhile;?>
@@ -903,6 +1114,22 @@ $search_result = mysqli_query($mysqli, $sql);
 <<<<<<< HEAD
 >>>>>>> 2a1fa5b80cf5620844a2df850761ae85f67412fb
 =======
+>>>>>>> parent of d1bfa58... added js and css files for collapsible
+=======
+         ?>
+         <!-- populate table from mysql database -->
+         <?php while($row = mysqli_fetch_array($search_result)):?>
+             <tr>
+              <!-- populate with names of columns in mysql database -->
+              <td><?php echo $row[player_name];?></td>
+
+              <td><?php echo $row[assists];?></td>
+
+
+          </tr>
+
+      <?php endwhile;?>
+
 >>>>>>> parent of d1bfa58... added js and css files for collapsible
   </table>
 
@@ -935,6 +1162,7 @@ $search_result = mysqli_query($mysqli, $sql);
                   <td><?php echo $row[player_name];?></td>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   <td><?php echo $row[steals];?></td>
 =======
@@ -946,11 +1174,18 @@ $search_result = mysqli_query($mysqli, $sql);
 
                   <td><?php echo $row[steals];?></td>
 >>>>>>> parent of d1bfa58... added js and css files for collapsible
+=======
+
+                  <td><?php echo $row[steals];?></td>
+>>>>>>> parent of d1bfa58... added js and css files for collapsible
 
               </tr>
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of d1bfa58... added js and css files for collapsible
 =======
 >>>>>>> parent of d1bfa58... added js and css files for collapsible
               </tr>
@@ -958,10 +1193,13 @@ $search_result = mysqli_query($mysqli, $sql);
           <?php endwhile;?>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           <?php endwhile;?>
 
 >>>>>>> 2a1fa5b80cf5620844a2df850761ae85f67412fb
+=======
+>>>>>>> parent of d1bfa58... added js and css files for collapsible
 =======
 >>>>>>> parent of d1bfa58... added js and css files for collapsible
       </table>
