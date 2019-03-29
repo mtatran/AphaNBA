@@ -192,7 +192,7 @@ printf ( $home);
   //  echo '<p>';
   printf ($home);
     //echo '</p>';
-/*
+
   $sql = "SELECT t.win "
   . "FROM teams t "
   . "WHERE t.team_name='".$home."'";
@@ -204,11 +204,13 @@ printf ( $home);
          {
             $loss = $row2[loss];
          }
-
-         printf ("win:");
-         pintf($win);
-         printf ("loss:");
-         printf ($loss);
+  
+         echo '<p>';
+         print "Win:";
+         printf ('<div>%s</div>', $win);
+         print "Loss:";
+         printf ('<div>%s</div>', $loss);
+         echo '</p>';
 ?>
 </h1>
 
@@ -216,6 +218,7 @@ printf ( $home);
 
 
   <?php
+  /*
   //gets the date time and location from the href
   $date_time = isset($_GET['date_time']) ? $_GET['date_time'] : false;
   $game_location = isset($_GET['game_location']) ? $_GET['game_location'] : false;
