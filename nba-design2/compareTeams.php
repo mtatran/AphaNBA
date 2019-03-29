@@ -195,39 +195,23 @@ printf ( $home);
 <!--  right side -->
 <div class="section">
   <h1>
-    <?php 
+    <?php
     $home = isset($_GET['home_team']) ? $_GET['home_team'] : false;
 
   //  echo '<p>';
   printf ($home);
     //echo '</p>';
-
+/*
   $sql = "SELECT t.win "
   . "FROM teams t "
   . "WHERE t.team_name='".$home."'";
-  $search_result = mysqli_query($mysqli, $sql);
-  while ($row = mysqli_fetch_assoc($search_result))
-         {
-            $win = $row[win];
-         }
   $sql2 = "SELECT t.loss "
   . "FROM teams t "
   . "WHERE t.team_name='".$home."'";
-  $search_result2 = mysqli_query($mysqli, $sql2);
-  while ($row2 = mysqli_fetch_assoc($search_result2))
-         {
-            $loss = $row2[loss];
-         }
-  
-         $w = 'Win:';
-         $l = 'Loss:';
-         echo '<p>';
-         //printf('win:','<div>%s</div>', $win);
-         //printf ('loss:','<div>%s</div>', $loss);
-         echo sprintf($w,$win);
-         echo sprintf($l,$loss);
-         echo '</p>';
-?>
+
+
+  printf($win + "-" + $loss);
+*/  ?>
 </h1>
 
 
@@ -272,7 +256,7 @@ printf ( $home);
 
   include('./my_connect.php');
   $mysqli = get_mysqli_conn();*/
-  $top_rebounds="SELECT players.player_name, players.rebounds FROM players WHERE players.player_team = 'Boston Celtics'  ORDER BY players.rebounds DESC limit 5";
+  $top_rebounds="SELECT players.player_name, players.rebounds FROM players WHERE players.player_team = '".$team."'  ORDER BY players.rebounds DESC limit 5";
   $rebound_result= mysqli_query($mysqli, $sql);
 
    ?>
