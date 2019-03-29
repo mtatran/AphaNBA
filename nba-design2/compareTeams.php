@@ -199,10 +199,17 @@ printf ( $home);
   $sql2 = "SELECT t.loss "
   . "FROM teams t "
   . "WHERE t.team_name='".$home."'";
+  $search_result2 = mysqli_query($mysqli, $sql2);
+  while ($row2 = mysqli_fetch_assoc($search_result2))
+         {
+            $loss = $row2[loss];
+         }
 
-
-  printf($win + "-" + $loss);
-*/  ?>
+         printf ("win:");
+         pintf($win);
+         printf ("loss:");
+         printf ($loss);
+?>
 </h1>
 
 
