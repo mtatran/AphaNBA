@@ -239,6 +239,11 @@ printf ( $home);
 <div class="section">
 
   <p>Players</p>
+  <?php
+  $top_rebounds="SELECT players.player_name, players.rebounds FROM players WHERE players.player_team = '".$home."'  ORDER BY players.rebounds DESC limit 5";
+  $rebound_result= mysqli_query($mysqli, $sql);
+
+   ?>
 </div>
 
 </div>
