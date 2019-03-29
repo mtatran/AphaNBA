@@ -200,7 +200,7 @@ printf ( $home);
          {
             $win = $row[win];
             $loss = $row[loss];
-            
+
          }
  /* $sql2 = "SELECT t.loss "
   . "FROM teams t "
@@ -261,29 +261,152 @@ printf ( $home);
 
   include('./my_connect.php');
   $mysqli = get_mysqli_conn();*/
-  $top_rebounds="SELECT players.player_name, players.rebounds FROM players WHERE players.player_team = '".$team."'  ORDER BY players.rebounds DESC limit 5";
-  $rebound_result= mysqli_query($mysqli, $sql);
+?>
 
-   ?>
-   <table name="dataTable">
-       <tr>
-           <th>#</th>
-           <th>Player</th>
-       </tr>
-       <?php while($row = mysqli_fetch_array($rebound_result)):?>
-           <tr>
-            <!-- populate with names of columns in mysql database -->
-            <td><?php echo $row[player_name];?></td>
+</div>
+<?php
+$mysqli = get_mysqli_conn();
+$team="Atlanta Hawks";
+//gets all users orders
+$sql = "SELECT players.player_name, players.rebounds FROM players WHERE players.player_team = '".$team."'  ORDER BY players.rebounds DESC limit 5";
+$search_result = mysqli_query($mysqli, $sql);
 
-            <td><?php echo $row[rebounds];?></td>
+//echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
+?>
+
+    <table name="dataTable" class="table2">
+        <tr>
+            <th>name</th>
+            <th>rebound</th>
 
         </tr>
 
-    <?php endwhile;?>
+        <!-- populate table from mysql database -->
+        <?php while($row = mysqli_fetch_array($search_result)):?>
+            <tr>
+             <!-- populate with names of columns in mysql database -->
+             <td><?php echo $row[player_name];?></td>
 
-</table>
-</div>
+             <td><?php echo $row[rebounds];?></td>
 
+
+         </tr>
+
+     <?php endwhile;?>
+
+ </table>
+
+<?php
+ $mysqli = get_mysqli_conn();
+ $team="Atlanta Hawks";
+ //gets all users orders
+ $sql = "SELECT players.player_name, players.assists FROM players WHERE players.player_team = '".$team."'  ORDER BY players.assists DESC limit 5";
+ $search_result = mysqli_query($mysqli, $sql);
+
+ //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
+ ?>
+
+     <table name="dataTable" class="table2">
+         <tr>
+             <th>name</th>
+             <th>assists</th>
+
+         </tr>
+
+         <?php
+
+       //  $sum=0;
+
+         ?>
+         <!-- populate table from mysql database -->
+         <?php while($row = mysqli_fetch_array($search_result)):?>
+             <tr>
+              <!-- populate with names of columns in mysql database -->
+              <td><?php echo $row[player_name];?></td>
+
+              <td><?php echo $row[assists];?></td>
+
+
+          </tr>
+
+      <?php endwhile;?>
+
+  </table>
+
+  <?php
+     $mysqli = get_mysqli_conn();
+     $team="Atlanta Hawks";
+     //gets all users orders
+     $sql = "SELECT players.player_name, players.steals FROM players WHERE players.player_team = '".$team."'  ORDER BY players.steals DESC limit 5";
+     $search_result = mysqli_query($mysqli, $sql);
+
+     //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
+     ?>
+
+         <table name="dataTable" class="table2">
+             <tr>
+                 <th>name</th>
+                 <th>steals</th>
+
+             </tr>
+
+             <?php
+
+           //  $sum=0;
+
+             ?>
+             <!-- populate table from mysql database -->
+             <?php while($row = mysqli_fetch_array($search_result)):?>
+                 <tr>
+                  <!-- populate with names of columns in mysql database -->
+                  <td><?php echo $row[player_name];?></td>
+
+                  <td><?php echo $row[steals];?></td>
+
+
+              </tr>
+
+          <?php endwhile;?>
+
+      </table>
+
+
+    <?php
+       $mysqli = get_mysqli_conn();
+       $team="Atlanta Hawks";
+       //gets all users orders
+       $sql = "SELECT players.player_name, players.blocks FROM players WHERE players.player_team = '".$team."'  ORDER BY players.blocks DESC limit 5";
+       $search_result = mysqli_query($mysqli, $sql);
+
+       //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
+       ?>
+
+           <table name="dataTable" class="table2">
+               <tr>
+                   <th>name</th>
+                   <th>blocks</th>
+
+               </tr>
+
+               <?php
+
+             //  $sum=0;
+
+               ?>
+               <!-- populate table from mysql database -->
+               <?php while($row = mysqli_fetch_array($search_result)):?>
+                   <tr>
+                    <!-- populate with names of columns in mysql database -->
+                    <td><?php echo $row[player_name];?></td>
+
+                    <td><?php echo $row[blocks];?></td>
+
+
+                </tr>
+
+            <?php endwhile;?>
+
+        </table>
 </div>
 <div class="col s6 pull-s6">
 
