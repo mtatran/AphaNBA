@@ -192,9 +192,6 @@ printf ( $home);
   //  echo '<p>';
   printf ($home);
     //echo '</p>';
-    ?>
-  </h1>
-    <?php
   $sql = "SELECT t.win "
   . "FROM teams t "
   . "WHERE t.team_name='".$home."'";
