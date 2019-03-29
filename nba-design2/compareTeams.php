@@ -12,6 +12,7 @@
 </head>
 <body>
   <?php
+  session_start();
 
   error_reporting(E_ALL ^ E_NOTICE);
   // mysqli connection via user-defined function
