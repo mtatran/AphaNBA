@@ -218,7 +218,7 @@ body {
 
 	<header class="container">
       <div class="row">
-    	<div class="col s12"><mark style="background-color:	#123123"><h1>Dashboard</h1> <h5 style="color:black">Game Schedule <br /> 2019 season</h5></div>
+    	<div class="col s12"><mark style="background-color:	#7FFFD4	"><h1>Definitions</h1> <h5 style="color:black">Game Schedule <br /> 2019 season</h5></div>
       </div>
       <div class="row">
         <div class="col m12 l6"><br /><br /><br /><center>
