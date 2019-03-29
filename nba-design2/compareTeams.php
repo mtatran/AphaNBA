@@ -219,10 +219,8 @@ printf ( $home);
             $loss = $row2[loss];
          }
   
-         echo "<p>win :</p>";
-         echo $win;
-  echo "<p>loss :</p>";
-  echo $loss;
+         echo "<p>win :</p>".$win;
+  echo "<p>loss :</p>".$loss;
 ?>
 </h1>
 
