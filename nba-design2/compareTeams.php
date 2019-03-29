@@ -185,20 +185,26 @@ printf ( $home);
 
 <!--  right side -->
 <div class="section">
-  <h1><?php $home = isset($_GET['home_team']) ? $_GET['home_team'] : false;
-  if($home){
+  <h1>
+    <?php /*
+    $home = isset($_GET['home_team']) ? $_GET['home_team'] : false;
+
   //  echo '<p>';
-  printf ( $home);
+  printf ($home);
     //echo '</p>';
-  }
-  $win = "SELECT t.win "
+
+  $sql = "SELECT t.win "
   . "FROM teams t "
   . "WHERE t.team_name='".$home."'";
-  $loss = "SELECT t.loss "
+  $sql2 = "SELECT t.loss "
   . "FROM teams t "
   . "WHERE t.team_name='".$home."'";
-  printf(win + "-" + loss);
-  ?></h1>
+
+
+  printf($win + "-" + $loss);
+*/  ?>
+</h1>
+
 
 
 
