@@ -28,6 +28,7 @@
         <a id="logo-container" href="https://mansci-db.uwaterloo.ca/~r2abdall/nba-design2/index.php" class="sidenav"><img src="https://img.icons8.com/ios/50/000000/back-filled.png" alt="backbutton";/></a>
       </ul>
 
+
       <ul id="nav-mobile" class="sidenav">
         <li><a href="https://mansci-db.uwaterloo.ca/~r2abdall/nba-design2/index.php">Back to Game Schedule</a></li>
         <li style="color:red"><a href="#">Your Favorite Games</a></li>
@@ -332,7 +333,7 @@ printf ( $home);
           <h5 class="white-text">Index Information</h5>
 
           <p class="grey-text text-lighten-4">Learn More</p>
-          <a href="https://mansci-db.uwaterloo.ca/~r2abdall/nba-design2/LearnMore.php"></a>
+          <a href="https://mansci-db.uwaterloo.ca/~r2abdall/nba-design2/learnMore.php"></a>
 
         </div>
 
