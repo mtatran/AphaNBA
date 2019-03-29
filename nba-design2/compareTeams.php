@@ -220,7 +220,7 @@ printf ( $home);
          }
   
          printf ("win :", $win);
-        printf ("loss :", $loss;
+         printf ("loss :", $loss);
 ?>
 </h1>
 
