@@ -23,16 +23,7 @@
   <nav class="white lighten-1" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="https://www.ticketmaster.ca/" class="brand-logo center"><img src="https://pbs.twimg.com/profile_images/1063091728398323712/zGJd2_dQ_400x400.jpg" alt="ticketmaster" height="50px" width="50px";/></a>
-
-      <ul class="show-on-large">
-        <a id="logo-container" href="https://mansci-db.uwaterloo.ca/~r2abdall/nba-design2/index.php" class="sidenav"><img src="https://img.icons8.com/ios/50/000000/back-filled.png" alt="backbutton";/></a>
-      </ul>
-
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="https://mansci-db.uwaterloo.ca/~r2abdall/nba-design2/index.php">Back to Game Schedule</a></li>
-        <li style="color:red"><a href="#">Your Favorite Games</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><img src="https://img.icons8.com/color/48/000000/menu.png" alt="menu";/></a>
+      <a id="logo-container" href="https://mansci-db.uwaterloo.ca/~r2abdall/nba-design2/index.php" class="brand-logo left"><img src="https://img.icons8.com/color/48/000000/back.png"alt="back-button";/></a>
     </div>
 
   </nav>
@@ -195,7 +186,7 @@ printf ( $home);
 <!--  right side -->
 <div class="section">
   <h1>
-    <?php 
+    <?php
     $home = isset($_GET['home_team']) ? $_GET['home_team'] : false;
 
   //  echo '<p>';
@@ -205,11 +196,6 @@ printf ( $home);
   $sql = "SELECT t.win "
   . "FROM teams t "
   . "WHERE t.team_name='".$home."'";
-  $search_result = mysqli_query($mysqli, $sql);
-  while ($row = mysqli_fetch_assoc($search_result))
-         {
-            $win = $row[win];
-         }
   $sql2 = "SELECT t.loss "
   . "FROM teams t "
   . "WHERE t.team_name='".$home."'";
@@ -232,6 +218,7 @@ printf ( $home);
 
 
   <?php
+  /*
   //gets the date time and location from the href
   $date_time = isset($_GET['date_time']) ? $_GET['date_time'] : false;
   $game_location = isset($_GET['game_location']) ? $_GET['game_location'] : false;
@@ -263,7 +250,14 @@ printf ( $home);
 
   <p>Players</p>
   <?php
-  $top_rebounds="SELECT players.player_name, players.rebounds FROM players WHERE players.player_team = '".$home."'  ORDER BY players.rebounds DESC limit 5";
+/*  session_start();
+
+  error_reporting(E_ALL ^ E_NOTICE);
+  // mysqli connection via user-defined function
+
+  include('./my_connect.php');
+  $mysqli = get_mysqli_conn();*/
+  $top_rebounds="SELECT players.player_name, players.rebounds FROM players WHERE players.player_team = '".$team."'  ORDER BY players.rebounds DESC limit 5";
   $rebound_result= mysqli_query($mysqli, $sql);
 
    ?>
@@ -272,15 +266,12 @@ printf ( $home);
            <th>#</th>
            <th>Player</th>
        </tr>
-       <?php while($row = mysqli_fetch_array($search_result)):?>
+       <?php while($row = mysqli_fetch_array($rebound_result)):?>
            <tr>
             <!-- populate with names of columns in mysql database -->
-            <td><?php echo $row[date_time];?></td>
+            <td><?php echo $row[player_name];?></td>
 
-            <td><?php echo $row[game_location];?></td>
-
-            <td><?php echo $row[visitor_team];?></td>
-            <td><?php echo $row[home_team];?></td>
+            <td><?php echo $row[rebounds];?></td>
 
         </tr>
 
