@@ -195,13 +195,13 @@ printf ( $home);
 <!--  right side -->
 <div class="section">
   <h1>
-    <?php /*
+    <?php
     $home = isset($_GET['home_team']) ? $_GET['home_team'] : false;
 
   //  echo '<p>';
   printf ($home);
     //echo '</p>';
-
+/*
   $sql = "SELECT t.win "
   . "FROM teams t "
   . "WHERE t.team_name='".$home."'";
