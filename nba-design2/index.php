@@ -28,7 +28,9 @@
     //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
     ?>
 
-        <table class="highlight centered">
+      <div class="container centered center-align">
+
+        <table align="center" class="striped center-align">
             <tr>
                 <th>Date</th>
                 <th>Location</th>
@@ -60,16 +62,17 @@
                     "
                    ?>
                  </td>
-
              </tr>
 
          <?php endwhile;?>
 
      </table>
+   </div>
 
 
 
 
+   </div>
 
 
   <!--  Scripts-->
