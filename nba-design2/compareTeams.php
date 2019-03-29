@@ -210,7 +210,7 @@ printf ( $home);
 
   if($date_time){
     echo '<p>';
-	printf ('<div>%s</div>', $date_time);
+//	printf ('<div>%s</div>', $date_time);
     echo '</p>';
   }
 
@@ -228,6 +228,11 @@ printf ( $home);
 <div class="section">
 <h5>Section 3</h5>
 <p>Stuff</p>
+</div>
+<div class="divider"></div>
+<div class="section">
+
+  <p>Players</p>
 </div>
 
 </div>
@@ -257,7 +262,11 @@ printf ( $home);
 
            <p>Stuff</p>
          </div>
+         <div class="divider"></div>
+         <div class="section">
 
+           <p>Players</p>
+         </div>
        </div>
 </div>
 </div>
