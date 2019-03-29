@@ -216,9 +216,9 @@ printf ( $home);
   $search_result2 = mysqli_query($mysqli, $sql2);
   while ($row2 = mysqli_fetch_assoc($search_result2))
          {
-            $loss = $row[loss];
+            $loss = $row2[loss];
          }
-  printf($win + "-" + $loss);
+  echo $win + "-" + $loss;
 ?>
 </h1>
 
