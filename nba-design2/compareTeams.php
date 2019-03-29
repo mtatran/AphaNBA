@@ -214,13 +214,13 @@ printf ( $home);
          }
          echo '<p>';
          printf ('Win: %s', $win);
-         printf (' - Loss: %s', $loss);
+         /*printf (' - Loss: %s', $loss);
          echo '<br>';
          printf('Games Played: %s', $played);
          echo '<br>';
          printf('Team Points: %s', $points);
          echo '<br>';
-         printf ( 'FGA: %s', $FGA, ' | FGM: %s', $FGM, ' | FG%: %s', $FG);
+         printf ( 'FGA: %s', $FGA, ' | FGM: %s', $FGM, ' | FG%: %s', $FG);*/ 
          echo '</p>';
 ?>
 </h1>
