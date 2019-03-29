@@ -199,7 +199,7 @@ printf ( $home);
   $search_result = mysqli_query($mysqli, $sql);
   while ($row = mysqli_fetch_assoc($search_result))
          {
-            $loss = $row[loss];
+            $win = $row[win];
          }
   $sql2 = "SELECT t.loss "
   . "FROM teams t "
