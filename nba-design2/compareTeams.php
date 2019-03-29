@@ -211,7 +211,7 @@ printf ( $home);
          }
 
          echo '<p>';
-         printf ('<div>%s</div>', $win);
+         printf ('win', $win);
          printf ('<div>%s</div>', $loss);
          echo '</p>';
 ?>
