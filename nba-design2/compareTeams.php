@@ -579,7 +579,6 @@ printf ( $home);
         <div class="col l6 s12">
           <h5 class="white-text">Index Information</h5>
 
-          <p class="grey-text text-lighten-4">Learn More</p>
           <a href="https://mansci-db.uwaterloo.ca/~r2abdall/nba-design2/learnMore.php">Learn More</a>
 
         </div>
@@ -590,7 +589,7 @@ printf ( $home);
 
   <div class="footer-copyright">
     <div class="container">
-    Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">AlphaBets</a><a href="https://icons8.com/icon/78291/circled-menu">Circled Menu icon by Icons8</a>
+    Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">AlphaBets</a><a href="https://icons8.com/icon/78291/circled-menu"></a>
     </div>
   </div>
 </footer>
