@@ -205,11 +205,19 @@ printf ( $home);
   $sql = "SELECT t.win "
   . "FROM teams t "
   . "WHERE t.team_name='".$home."'";
-  $win = mysqli_query($mysqli, $sql);
+  $search_result = mysqli_query($mysqli, $sql);
+  while ($row = mysqli_fetch_assoc($search_result))
+         {
+            $win = $row[win];
+         }
   $sql2 = "SELECT t.loss "
   . "FROM teams t "
   . "WHERE t.team_name='".$home."'";
-  $loss = mysqli_query($mysqli, $sql2);
+  $search_result2 = mysqli_query($mysqli, $sql2);
+  while ($row2 = mysqli_fetch_assoc($search_result2))
+         {
+            $loss = $row[loss];
+         }
   printf($win + "-" + $loss);
 ?>
 </h1>
