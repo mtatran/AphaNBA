@@ -219,11 +219,13 @@ printf ( $home);
             $loss = $row2[loss];
          }
   
+         $w = 'Win:';
+         $l = 'Loss:';
          echo '<p>';
          //printf('win:','<div>%s</div>', $win);
          //printf ('loss:','<div>%s</div>', $loss);
-         echo "Win: $win";
-         echo "Loss: $loss;
+         echo sprintf($w,$win);
+         echo sprintf($l,$loss);
          echo '</p>';
 ?>
 </h1>
