@@ -201,15 +201,10 @@ printf ( $home);
   //  echo '<p>';
   printf ($home);
     //echo '</p>';
-
+/*
   $sql = "SELECT t.win "
   . "FROM teams t "
   . "WHERE t.team_name='".$home."'";
-  $search_result = mysqli_query($mysqli, $sql);
-  while ($row = mysqli_fetch_assoc($search_result))
-         {
-            $win = $row[win];
-         }
   $sql2 = "SELECT t.loss "
   . "FROM teams t "
   . "WHERE t.team_name='".$home."'";
@@ -261,7 +256,14 @@ printf ( $home);
 
   <p>Players</p>
   <?php
-  $top_rebounds="SELECT players.player_name, players.rebounds FROM players WHERE players.player_team = '".$home."'  ORDER BY players.rebounds DESC limit 5";
+/*  session_start();
+
+  error_reporting(E_ALL ^ E_NOTICE);
+  // mysqli connection via user-defined function
+
+  include('./my_connect.php');
+  $mysqli = get_mysqli_conn();*/
+  $top_rebounds="SELECT players.player_name, players.rebounds FROM players WHERE players.player_team = '".$team."'  ORDER BY players.rebounds DESC limit 5";
   $rebound_result= mysqli_query($mysqli, $sql);
 
    ?>
@@ -270,15 +272,12 @@ printf ( $home);
            <th>#</th>
            <th>Player</th>
        </tr>
-       <?php while($row = mysqli_fetch_array($search_result)):?>
+       <?php while($row = mysqli_fetch_array($rebound_result)):?>
            <tr>
             <!-- populate with names of columns in mysql database -->
-            <td><?php echo $row[date_time];?></td>
+            <td><?php echo $row[player_name];?></td>
 
-            <td><?php echo $row[game_location];?></td>
-
-            <td><?php echo $row[visitor_team];?></td>
-            <td><?php echo $row[home_team];?></td>
+            <td><?php echo $row[rebounds];?></td>
 
         </tr>
 
