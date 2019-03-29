@@ -212,6 +212,7 @@ printf ( $home);
 
          echo '<p>';
          printf ('Win: %s', $win);
+         echo '';
          printf ('Loss: %s', $loss);
          echo '</p>';
 ?>
