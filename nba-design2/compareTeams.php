@@ -195,7 +195,7 @@ printf ( $home);
 <!--  right side -->
 <div class="section">
   <h1>
-    <?php 
+    <?php
     $home = isset($_GET['home_team']) ? $_GET['home_team'] : false;
 
   //  echo '<p>';
@@ -218,7 +218,7 @@ printf ( $home);
          {
             $loss = $row2[loss];
          }
-  
+
          printf ("win:");
          pintf($win);
          printf ("loss:");
