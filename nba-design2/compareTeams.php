@@ -219,10 +219,12 @@ printf ( $home);
             $loss = $row2[loss];
          }
   
+         echo '<p>';
          printf ('win:');
          printf('<div>%s</div>', $win);
-         echo 'loss:';
+         print ('loss:');
          printf ('<div>%s</div>', $loss);
+         echo '</p>';
 ?>
 </h1>
 
