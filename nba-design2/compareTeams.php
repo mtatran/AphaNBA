@@ -37,7 +37,7 @@
     error_reporting(E_ALL ^ E_NOTICE);
     include('./my_connect.php');
     $mysqli = get_mysqli_conn();
-<<<<<<< HEAD
+
 
     ?>
 
