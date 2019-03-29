@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <title>NBA</title>
@@ -261,7 +262,142 @@ printf ( $home);
 <div class="divider"></div>
 <div class="section">
 
-  <p>Players</p>
+  <button class=collapsible> Rebounds </button>
+  <div class="content">
+  <?php
+  $mysqli = get_mysqli_conn();
+  $team=isset($_GET['home_team']) ? $_GET['home_team'] : false;
+  //gets all users orders
+  $sql = "SELECT players.player_name, players.rebounds FROM players WHERE players.player_team = '".$team."'  ORDER BY players.rebounds DESC limit 5";
+  $search_result = mysqli_query($mysqli, $sql);
+
+  //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
+  ?>
+
+      <table name="dataTable" class = "table2">
+          <tr>
+              <th>name</th>
+              <th>rebound</th>
+
+          </tr>
+
+          <!-- populate table from mysql database -->
+          <?php while($row = mysqli_fetch_array($search_result)):?>
+              <tr>
+               <!-- populate with names of columns in mysql database -->
+               <td><?php echo $row[player_name];?></td>
+
+               <td><?php echo $row[rebounds];?></td>
+
+
+           </tr>
+
+       <?php endwhile;?>
+
+   </table>
+ </div>
+   <button class=collapsible> Assists </button>
+   <div class="content">
+<?php
+   $mysqli = get_mysqli_conn();
+   $team=isset($_GET['home_team']) ? $_GET['home_team'] : false;
+   //gets all users orders
+   $sql = "SELECT players.player_name, players.assists FROM players WHERE players.player_team = '".$team."'  ORDER BY players.assists DESC limit 5";
+   $search_result = mysqli_query($mysqli, $sql);
+
+   //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
+   ?>
+
+       <table name="dataTable" class = "table2">
+           <tr>
+               <th>name</th>
+               <th>assists</th>
+
+           </tr>
+
+           <!-- populate table from mysql database -->
+           <?php while($row = mysqli_fetch_array($search_result)):?>
+               <tr>
+                <!-- populate with names of columns in mysql database -->
+                <td><?php echo $row[player_name];?></td>
+
+                <td><?php echo $row[assists];?></td>
+
+
+            </tr>
+
+        <?php endwhile;?>
+
+    </table>
+</div>
+    <button class=collapsible> Steals </button>
+    <div class="content">
+    <?php
+       $mysqli = get_mysqli_conn();
+       $team=isset($_GET['home_team']) ? $_GET['home_team'] : false;
+       //gets all users orders
+       $sql = "SELECT players.player_name, players.steals FROM players WHERE players.player_team = '".$team."'  ORDER BY players.steals DESC limit 5";
+       $search_result = mysqli_query($mysqli, $sql);
+
+       //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
+       ?>
+
+           <table name="dataTable" class = "table2">
+               <tr>
+                   <th>name</th>
+                   <th>steals</th>
+
+               </tr>
+
+               <!-- populate table from mysql database -->
+               <?php while($row = mysqli_fetch_array($search_result)):?>
+                   <tr>
+                    <!-- populate with names of columns in mysql database -->
+                    <td><?php echo $row[player_name];?></td>
+
+                    <td><?php echo $row[steals];?></td>
+
+
+                </tr>
+
+            <?php endwhile;?>
+
+        </table>
+</div>
+<button class=collapsible> Blocks </button>
+<div class="content">
+      <?php
+         $mysqli = get_mysqli_conn();
+         $team=isset($_GET['home_team']) ? $_GET['home_team'] : false;
+         //gets all users orders
+         $sql = "SELECT players.player_name, players.blocks FROM players WHERE players.player_team = '".$team."'  ORDER BY players.blocks DESC limit 5";
+         $search_result = mysqli_query($mysqli, $sql);
+
+         //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
+         ?>
+
+             <table name="dataTable" class = "table2">
+                 <tr>
+                     <th>name</th>
+                     <th>blocks</th>
+
+                 </tr>
+
+                 <!-- populate table from mysql database -->
+                 <?php while($row = mysqli_fetch_array($search_result)):?>
+                     <tr>
+                      <!-- populate with names of columns in mysql database -->
+                      <td><?php echo $row[player_name];?></td>
+
+                      <td><?php echo $row[blocks];?></td>
+
+
+                  </tr>
+
+              <?php endwhile;?>
+
+          </table>
+        </div>
 
 </div>
 
@@ -292,8 +428,142 @@ printf ( $home);
          </div>
          <div class="divider"></div>
          <div class="section">
+           <button class=collapsible> Rebounds </button>
+           <div class="content">
+           <?php
+           $mysqli = get_mysqli_conn();
+           $team=isset($_GET['visitor_team']) ? $_GET['visitor_team'] : false;
+           //gets all users orders
+           $sql = "SELECT players.player_name, players.rebounds FROM players WHERE players.player_team = '".$team."'  ORDER BY players.rebounds DESC limit 5";
+           $search_result = mysqli_query($mysqli, $sql);
 
-           <p>Players</p>
+           //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
+           ?>
+
+               <table name="dataTable" class = "table2">
+                   <tr>
+                       <th>name</th>
+                       <th>rebound</th>
+
+                   </tr>
+
+                   <!-- populate table from mysql database -->
+                   <?php while($row = mysqli_fetch_array($search_result)):?>
+                       <tr>
+                        <!-- populate with names of columns in mysql database -->
+                        <td><?php echo $row[player_name];?></td>
+
+                        <td><?php echo $row[rebounds];?></td>
+
+
+                    </tr>
+
+                <?php endwhile;?>
+
+            </table>
+          </div>
+            <button class=collapsible> Assists </button>
+            <div class="content">
+         <?php
+            $mysqli = get_mysqli_conn();
+            $team=isset($_GET['visitor_team']) ? $_GET['visitor_team'] : false;
+            //gets all users orders
+            $sql = "SELECT players.player_name, players.assists FROM players WHERE players.player_team = '".$team."'  ORDER BY players.assists DESC limit 5";
+            $search_result = mysqli_query($mysqli, $sql);
+
+            //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
+            ?>
+
+                <table name="dataTable" class = "table2">
+                    <tr>
+                        <th>name</th>
+                        <th>assists</th>
+
+                    </tr>
+
+                    <!-- populate table from mysql database -->
+                    <?php while($row = mysqli_fetch_array($search_result)):?>
+                        <tr>
+                         <!-- populate with names of columns in mysql database -->
+                         <td><?php echo $row[player_name];?></td>
+
+                         <td><?php echo $row[assists];?></td>
+
+
+                     </tr>
+
+                 <?php endwhile;?>
+
+             </table>
+         </div>
+             <button class=collapsible> Steals </button>
+             <div class="content">
+             <?php
+                $mysqli = get_mysqli_conn();
+                $team=isset($_GET['visitor_team']) ? $_GET['visitor_team'] : false;
+                //gets all users orders
+                $sql = "SELECT players.player_name, players.steals FROM players WHERE players.player_team = '".$team."'  ORDER BY players.steals DESC limit 5";
+                $search_result = mysqli_query($mysqli, $sql);
+
+                //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
+                ?>
+
+                    <table name="dataTable" class = "table2">
+                        <tr>
+                            <th>name</th>
+                            <th>steals</th>
+
+                        </tr>
+
+                        <!-- populate table from mysql database -->
+                        <?php while($row = mysqli_fetch_array($search_result)):?>
+                            <tr>
+                             <!-- populate with names of columns in mysql database -->
+                             <td><?php echo $row[player_name];?></td>
+
+                             <td><?php echo $row[steals];?></td>
+
+
+                         </tr>
+
+                     <?php endwhile;?>
+
+                 </table>
+         </div>
+         <button class=collapsible> Blocks </button>
+         <div class="content">
+               <?php
+                  $mysqli = get_mysqli_conn();
+                  $team=isset($_GET['visitor_team']) ? $_GET['visitor_team'] : false;
+                  //gets all users orders
+                  $sql = "SELECT players.player_name, players.blocks FROM players WHERE players.player_team = '".$team."'  ORDER BY players.blocks DESC limit 5";
+                  $search_result = mysqli_query($mysqli, $sql);
+
+                  //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
+                  ?>
+
+                      <table name="dataTable" class = "table2">
+                          <tr>
+                              <th>name</th>
+                              <th>blocks</th>
+
+                          </tr>
+
+                          <!-- populate table from mysql database -->
+                          <?php while($row = mysqli_fetch_array($search_result)):?>
+                              <tr>
+                               <!-- populate with names of columns in mysql database -->
+                               <td><?php echo $row[player_name];?></td>
+
+                               <td><?php echo $row[blocks];?></td>
+
+
+                           </tr>
+
+                       <?php endwhile;?>
+
+                   </table>
+                 </div>
          </div>
        </div>
 </div>
@@ -332,6 +602,21 @@ printf ( $home);
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
 
+  <script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
 
+for (i = 0; i < coll.length; i++) {
+coll[i].addEventListener("click", function() {
+this.classList.toggle("active");
+var content = this.nextElementSibling;
+if (content.style.maxHeight){
+content.style.maxHeight = null;
+} else {
+content.style.maxHeight = content.scrollHeight + "px";
+}
+});
+}
+</script>
   </body>
 </html>
