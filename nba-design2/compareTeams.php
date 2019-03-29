@@ -23,7 +23,7 @@
   <nav class="white lighten-1" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="https://www.ticketmaster.ca/" class="brand-logo center"><img src="https://pbs.twimg.com/profile_images/1063091728398323712/zGJd2_dQ_400x400.jpg" alt="ticketmaster" height="50px" width="50px";/></a>
-      <a id="logo-container" href="https://mansci-db.uwaterloo.ca/~r2abdall/nba-design2/index.php" class="brand-logo left"><img src="https://img.icons8.com/color/48/000000/back.png"alt="back-button";/></a>
+      <a id="logo-container" href="https://mansci-db.uwaterloo.ca/~r2abdall/nba-design2/index.php" class="brand-logo left"><img src="https://img.icons8.com/material/48/000000/back.png alt="back-button";/></a>
     </div>
 
   </nav>
