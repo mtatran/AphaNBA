@@ -28,7 +28,7 @@
     //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
     ?>
 
-        <table name="dataTable">
+        <table class="highlight centered">
             <tr>
                 <th>Date</th>
                 <th>Location</th>
