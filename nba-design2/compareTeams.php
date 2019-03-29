@@ -122,10 +122,7 @@ printf ( $home);
   </div>
   <div class="row center">
     <a href="https://www.bet365.com/en/" id="download-button" class="btn-large waves-effect waves-light">Bet</a>
-    <span id='heart' class='button'></span>
   </div>
-
-
     </div>
   </div>
 
