@@ -198,7 +198,7 @@ printf ( $home);
   $search_result = mysqli_query($mysqli, $sql);
   while ($row = mysqli_fetch_assoc($search_result))
          {
-            $win = $row["win"];
+            $win = $row[win];
             $loss = $row[loss];
             $played = $row[games_played];
             $points = $row[team_points];
