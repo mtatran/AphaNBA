@@ -27,8 +27,15 @@
 
     //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
     ?>
+    <nav class="white lighten-1" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="https://www.ticketmaster.ca/" class="brand-logo center"><img src="https://pbs.twimg.com/profile_images/1063091728398323712/zGJd2_dQ_400x400.jpg" alt="ticketmaster" height="50px" width="50px";/></a>
+        </div>
 
-        <table class="highlight centered">
+    </nav>
+    <div class="section no-pad-bot" id="index-banner">
+      <div class="container centered centered-align">
+        <table align="center" class="highlight center-align">
             <tr>
                 <th>Date</th>
                 <th>Location</th>
@@ -66,16 +73,14 @@
          <?php endwhile;?>
 
      </table>
-
-
-
-
+   </div>
+   </div>
 
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
+  <script src="js/init.js"></script> -->
 
 
   </body>
