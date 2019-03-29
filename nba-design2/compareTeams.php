@@ -219,8 +219,10 @@ printf ( $home);
             $loss = $row2[loss];
          }
   
-         printf ("win :", $win);
-         printf ("loss :", $loss);
+         printf ("win:");
+         pintf($win);
+         printf ("loss:");
+         printf ($loss);
 ?>
 </h1>
 
