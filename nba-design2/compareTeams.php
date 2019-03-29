@@ -198,20 +198,29 @@ printf ( $home);
   $search_result = mysqli_query($mysqli, $sql);
   while ($row = mysqli_fetch_assoc($search_result))
          {
-            $win = $row["win"];
+            $win = $row[win];
             $loss = $row[loss];
-
+            $played = $row[games_played];
+            $points = $row[team_points];
+            $FGA = $row[team_FGA];
+            $FGM = $row[team_FGM];
+            $FG = $row[FG_percent];
+            $FTA = $row[team_FTA];
+            $FTM = $row[team_FTM];
+            $FT = $row[team_Ft_percent];
+            $PTA = $row[team_3PTA];
+            $PTM = $rom[team_PM];
+            $PT = $row[team_3PT_percent];
          }
          echo '<p>';
          printf ('Win: %s', $win);
          printf (' - Loss: %s', $loss);
-         /*echo '<br>';
+         echo '<br>';
          printf('Games Played: %s', $played);
          echo '<br>';
          printf('Team Points: %s', $points);
          echo '<br>';
          printf ( 'FGA: %s', $FGA, ' | FGM: %s', $FGM, ' | FG%: %s', $FG);
-         */
          echo '</p>';
 ?>
 </h1>
