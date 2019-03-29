@@ -330,7 +330,7 @@ printf ( $home);
         <div class="col l6 s12">
           <h5 class="white-text">Index Information</h5>
 
-          <p class="grey-text text-lighten-4">This is where we have a link to another index page where there are definitions</p>
+          <p class="grey-text text-lighten-4">Learn More</p>
 
         </div>
 
