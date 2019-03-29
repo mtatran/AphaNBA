@@ -192,6 +192,12 @@ printf ( $home);
   //  echo '<p>';
   printf ($home);
     //echo '</p>';
+    ?>
+  </h1>
+  <p>
+    <?php
+
+  $home = isset($_GET['home_team']) ? $_GET['home_team'] : false;
 
   $sql = "SELECT t.win "
   . "FROM teams t "
@@ -215,7 +221,7 @@ printf ( $home);
          printf ('Loss: %s', $loss);
          echo '</p>';
 ?>
-</h1>
+  </p>
 
 
 
