@@ -198,16 +198,19 @@ printf ( $home);
 
 <!--  right side -->
 <div class="section">
-  <h1><?php $game_location = isset($_GET['game_location']) ? $_GET['game_location'] : false;
-            printf($home_team);
-      ?>
-  </h1>
+  <h1><?php $home = isset($_GET['home_team']) ? $_GET['home_team'] : false;
+  if($home){
+  //  echo '<p>';
+  printf ( $home);
+    //echo '</p>';
+  }
+  ?></h1>
 
 
 
   <?php
   //gets the date time and location from the href
-/*  $date_time = isset($_GET['date_time']) ? $_GET['date_time'] : false;
+  $date_time = isset($_GET['date_time']) ? $_GET['date_time'] : false;
   $game_location = isset($_GET['game_location']) ? $_GET['game_location'] : false;
 
 
@@ -215,7 +218,7 @@ printf ( $home);
     echo '<p>';
 	printf ('<div>%s</div>', $date_time);
     echo '</p>';
-  }*/
+  }
 
 ?>
 
