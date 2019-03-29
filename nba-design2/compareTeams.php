@@ -12,12 +12,12 @@
 </head>
 <body>
   <?php
-
+/*
   error_reporting(E_ALL ^ E_NOTICE);
   // mysqli connection via user-defined function
 
   include('./my_connect.php');
-  $mysqli = get_mysqli_conn();
+  $mysqli = get_mysqli_conn();*/
   ?>
 
   <nav class="white lighten-1" role="navigation">
@@ -241,7 +241,14 @@ printf ( $home);
 
 <!--  left side -->
          <div class="section">
-           <h5>Games Played</h5>
+           <h5><?php
+           $visitor = isset($_GET['visitor_team']) ? $_GET['visitor_team'] : false;
+           if($visitor){
+           //  echo '<p>';
+           printf ( $visitor);
+             //echo '</p>';
+           }
+            ?></h5>
            <h5>Team Points</h5>
            <p>Stuff</p>
          </div>
