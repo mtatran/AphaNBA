@@ -192,15 +192,17 @@ printf ( $home);
   //  echo '<p>';
   printf ($home);
     //echo '</p>';
-  $sql = "SELECT t.win "
+  $sql = "SELECT "
   . "FROM teams t "
   . "WHERE t.team_name='".$home."'";
   $search_result = mysqli_query($mysqli, $sql);
   while ($row = mysqli_fetch_assoc($search_result))
          {
             $win = $row[win];
+            $loss = $row[loss];
+            
          }
-  $sql2 = "SELECT t.loss "
+ /* $sql2 = "SELECT t.loss "
   . "FROM teams t "
   . "WHERE t.team_name='".$home."'";
   $search_result2 = mysqli_query($mysqli, $sql2);
@@ -208,7 +210,7 @@ printf ( $home);
          {
             $loss = $row2[loss];
          }
-
+*/
          echo '<p>';
          printf ('Win: %s', $win);
          printf ('Loss: %s', $loss);
