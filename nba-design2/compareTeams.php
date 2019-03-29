@@ -11,6 +11,16 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
+  <?php
+  session_start();
+
+  error_reporting(E_ALL ^ E_NOTICE);
+  // mysqli connection via user-defined function
+
+  include('./my_connect.php');
+  $mysqli = get_mysqli_conn();
+  ?>
+
   <nav class="white lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img src="https://pbs.twimg.com/profile_images/1063091728398323712/zGJd2_dQ_400x400.jpg" alt="ticketmaster" height="50px" width="50px";/></a>
       <ul class="right hide-on-med-and-down">
@@ -34,11 +44,11 @@ $home = isset($_GET['home_team']) ? $_GET['home_team'] : false;
       <?php
       $visitor = isset($_GET['visitor_team']) ? $_GET['visitor_team'] : false;
 
-       //if($visitor){
+       if($visitor){
         //  echo '<p>';
         printf ($visitor);
           //echo '</p>';
-      //  }
+       }
 
         ?> vs.
 <?php
@@ -140,7 +150,10 @@ printf ( $home);
 
 <!--  right side -->
 <div class="section">
-  <h1>All Orders</h1>
+  <h1><?php $game_location = isset($_GET['game_location']) ? $_GET['game_location'] : false;
+            printf($home_team);
+      ?>
+  </h1>
 
 
 
@@ -154,22 +167,16 @@ printf ( $home);
   $mysqli = get_mysqli_conn();
 
   //gets the date time and location from the href
-  $date_time = isset($_GET['date_time']) ? $_GET['date_time'] : false;
+/*  $date_time = isset($_GET['date_time']) ? $_GET['date_time'] : false;
   $game_location = isset($_GET['game_location']) ? $_GET['game_location'] : false;
 
-
-  //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
 
   if($date_time){
     echo '<p>';
 	printf ('<div>%s</div>', $date_time);
     echo '</p>';
-  }
-  if($game_location){
-    echo '<p>';
-	printf ('<div>%s</div>', $game_location);
-    echo '</p>';
-  }
+  }*/
+
 ?>
 
 
