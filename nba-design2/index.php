@@ -33,7 +33,47 @@
         </div>
 
     </nav>
+
+
     <div class="section no-pad-bot" id="index-banner">
+  <form action=''>
+
+   <label>Select by Teams:</label>
+   <select class="browser-default" multiple>
+     <option value="1">Option 1</option>
+     <option value="2">Option 2</option>
+     <option value="3">Option 3</option>
+     <option value="4">Option 1</option>
+     <option value="5">Option 2</option>
+     <option value="6">Option 3</option>
+     <option value="7">Option 1</option>
+     <option value="8">Option 2</option>
+     <option value="9">Option 3</option>
+     <option value="10">Option 1</option>
+     <option value="11">Option 2</option>
+     <option value="12">Option 3</option>
+     <option value="13">Option 1</option>
+     <option value="14">Option 2</option>
+     <option value="15">Option 3</option>
+     <option value="16">Option 1</option>
+     <option value="17">Option 2</option>
+     <option value="18">Option 3</option>
+     <option value="19">Option 1</option>
+     <option value="20">Option 2</option>
+     <option value="21">Option 3</option>
+     <option value="22">Option 1</option>
+     <option value="23">Option 2</option>
+     <option value="24">Option 3</option>
+     <option value="25">Option 2</option>
+     <option value="26">Option 3</option>
+     <option value="27">Option 2</option>
+     <option value="28">Option 3</option>
+     <option value="29">Option 3</option>
+     <option value="30">Option 9</option>
+   </select>
+   <button type="submit"class="waves-effect waves-light btn-small">submit</button>
+   </form>
+
       <div class="container centered centered-align">
         <table align="center" class="highlight center-align">
             <tr>
@@ -75,7 +115,18 @@
      </table>
    </div>
    </div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+   var elems = document.querySelectorAll('select');
+   var instances = M.FormSelect.init(elems, options);
+ });
 
+ // Or with jQuery
+
+ $(document).ready(function(){
+   $('select').formSelect();
+ });
+       </script>
 
   <!--  Scripts-->
   <!-- <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
