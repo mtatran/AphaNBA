@@ -109,7 +109,7 @@
                    <?php echo
                     "
                       <a class='waves-effect waves-light btn modal-trigger'
-                      href='compareTeams.php?date_time=".$row[date_time]."&game_location=".$row[game_location]."&visitor_team=".$row[visitor_team]."&home_team=".$row[home_team]."'>+</a>
+                      href='compareTeams.php?date_time=".$row[date_time]."&game_location=".$row[game_location]."&visitor_team=".$row[visitor_team]."&home_team=".$row[home_team]."' target='_blank'>></a>
                     "
                    ?>
                  </td>
