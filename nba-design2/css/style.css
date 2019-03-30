@@ -55,7 +55,6 @@
 
 }
 #download-button{
-
   background-color: #D00509;
 }
 .page-footer{
@@ -82,19 +81,19 @@ h1{
   font-size: 250%;
 }
 .collapsible {
-  background-color: #D00509;
-  color: white;
+  background-color:white;
+  color: black;
   cursor: pointer;
-  padding: 18px;
   width: 100%;
   border: none;
-  text-align: left;
+  text-align: center;
+  padding : 18px;
   outline: none;
   font-size: 15px;
 }
 
 .active, .collapsible:hover {
-  background-color: #555;
+  background-color: grey;
 }
 
 .content {
