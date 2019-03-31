@@ -56,10 +56,9 @@
        }
 
         ?> 
-        <h1 style="text-align:center;">
+        <div style="text-align:center;">
         VS.
-        </h1>
-        
+        </div>
 <?php
 $home = isset($_GET['home_team']) ? $_GET['home_team'] : false;
 if($home){
