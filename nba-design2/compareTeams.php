@@ -56,9 +56,9 @@
        }
 
         ?>
-        <div centered>
+
         Vs.
-        </div>
+
 <?php
 $home = isset($_GET['home_team']) ? $_GET['home_team'] : false;
 if($home){
@@ -67,7 +67,7 @@ printf ( $home, "        ");
   //echo '</p>';
 }
  ?>
-      </h1>
+</h5>
       <div class="row center">
         <h5 class="header col s12 light">
           <?php
@@ -85,9 +85,21 @@ printf ( $home, "        ");
                 $date = date_create($date_time);
                 echo '<br>';
                 echo date_format($date, 'l \, F jS Y \a\t g:ia'),' EST';
-                ?></h5>
+                ?>
+</h5>
       </div>
       <div align="center">
+
+
+        <!-- Tap Target Structure -->
+        <div class="tap-target" data-target="menu">
+          <div class="tap-target-content">
+            <h5>Title</h5>
+            <p>A bunch of text</p>
+          </div>
+        </div>
+
+
         <table class="striped" style>
     <tbody>
       <tr>
@@ -615,7 +627,14 @@ printf ( $home, "        ");
                  </div>
          </div>
        </div>
-</div>
+<p>
+  hello
+</p>
+
+<a class="btn-floating btn-large pulse" href="https://mansci-db.uwaterloo.ca/~r2abdall/nba-design2/news.php" >News</a>
+
+
+       </div>
 </div>
     </div>
     <br><br>
@@ -651,6 +670,18 @@ printf ( $home, "        ");
   <script src="js/init.js"></script>
 
   <script>
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.tap-target');
+    var instances = M.TapTarget.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.tap-target').tapTarget();
+  });
 var coll = document.getElementsByClassName("collapsible");
 var i;
 
