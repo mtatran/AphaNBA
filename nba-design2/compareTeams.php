@@ -81,6 +81,7 @@ printf ( $home);
                 $date_time = isset($_GET['date_time']) ? $_GET['date_time'] : false;
                 $date = date_create($date_time);
                 echo '<br>';
+                echo '<br>';
                 echo date_format($date, 'l \, F jS Y \a\t g:ia'),' EST';
                 ?></h5>
       </div>
