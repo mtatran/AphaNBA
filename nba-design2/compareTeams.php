@@ -80,7 +80,7 @@ printf ( $home);
           ,      <?php
                 $date_time = isset($_GET['date_time']) ? $_GET['date_time'] : false;
                 $date = date_create($date_time);
-                echo date_format($date, 'l jS F Y \a\t g:ia'),'EST';
+                echo date_format($date, 'l F jS Y \a\t g:ia'),' EST';
                 ?></h5>
       </div>
       <div align="center">
