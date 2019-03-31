@@ -265,20 +265,6 @@ printf ( $home);
   }
 */
 ?>
-
-
-<p>stuff</p>
-</div>
-<div class="divider"></div>
-<div class="section">
-<h5>Section 2</h5>
-<p>Stuff</p>
-</div>
-<div class="divider"></div>
-<div class="section">
-<h5>Section 3</h5>
-<p>Stuff</p>
-</div>
 <div class="divider"></div>
 <div class="section">
 
@@ -472,19 +458,6 @@ printf ( $home);
                 printf (' | 3PT Percent: %s', $PT);
                 echo '</p>';
          ?></h5>
-         </div>
-           <h5>Team Points</h5>
-           <p>Stuff</p>
-         </div>
-         <div class="divider"></div>
-         <div class="section">
-           <h5>Section 2</h5>
-           <p>Stuff</p>
-         </div>
-         <div class="divider"></div>
-         <div class="section">
-
-           <p>Stuff</p>
          </div>
          <div class="divider"></div>
          <div class="section">
