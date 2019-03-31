@@ -233,16 +233,16 @@ printf ( $home);
            printf('Team Points: %s', $points);
            echo '<br>';
            printf ( 'FGA: %s', $FGA);
-           printf (' | FGM: %s', $FGM);
-           printf (' | FG ','".%."',': %s', $FG);
+           printf ('  |  FGM: %s', $FGM);
+           printf ('  |  FG Percent: %s', $FG);
            echo '<br>';
            printf ( 'FTA: %s', $FTA);
-           printf (' | FTM: %s', $FTM);
-           printf (' | FT Percent: %s', $FT);
+           printf ('  |  FTM: %s', $FTM);
+           printf ('  |  FT Percent: %s', $FT);
            echo '<br>';
            printf ( '3PTA: %s', $PTA);
-           printf (' | 3PTM: %s', $PTM);
-           printf (' | 3PT Percent: %s', $PT);
+           printf ('  |  3PTM: %s', $PTM);
+           printf ('  |  3PT Percent: %s', $PT);
            echo '</p>';
 
 ?>
@@ -462,16 +462,16 @@ printf ( $home);
                 printf('Team Points: %s', $points);
                 echo '<br>';
                 printf ( 'FGA: %s', $FGA);
-                printf (' | FGM: %s', $FGM);
-                printf (' | FG Percent: %s', $FG);
+                printf ('  |  FGM: %s', $FGM);
+                printf ('  |  FG Percent: %s', $FG);
                 echo '<br>';
                 printf ( 'FTA: %s', $FTA);
-                printf (' | FTM: %s', $FTM);
-                printf (' | FT Percent: %s', $FT);
+                printf ('  |  FTM: %s', $FTM);
+                printf ('  |  FT Percent: %s', $FT);
                 echo '<br>';
                 printf ( '3PTA: %s', $PTA);
-                printf (' | 3PTM: %s', $PTM);
-                printf (' | 3PT Percent: %s', $PT);
+                printf ('  |  3PTM: %s', $PTM);
+                printf ('  |  3PT Percent: %s', $PT);
                 echo '</p>';
          ?></h5>
          </div>
