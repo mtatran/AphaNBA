@@ -197,6 +197,7 @@ printf ( $home);
 
 <!--  right side -->
 <div class="section">
+<div style="text-align:center;">
   <h5>
     <?php
     $home = isset($_GET['home_team']) ? $_GET['home_team'] : false;
@@ -245,6 +246,7 @@ printf ( $home);
 
 ?>
 </h5>
+</div>
 
 
 
@@ -425,6 +427,7 @@ printf ( $home);
 
 <!--  left side -->
          <div class="section">
+         <div style="text-align:center;">
            <h4><?php
            $visitor = isset($_GET['visitor_team']) ? $_GET['visitor_team'] : false;
 
@@ -469,6 +472,7 @@ printf ( $home);
                 printf (' | 3PT Percent: %s', $PT);
                 echo '</p>';
          ?></h4>
+         </div>
            <h5>Team Points</h5>
            <p>Stuff</p>
          </div>
