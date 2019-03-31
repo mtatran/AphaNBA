@@ -55,9 +55,9 @@
           //echo '</p>';
        }
 
-        ?> 
+        ?>
         <div centered>
-        Vs. 
+        Vs.
         </div>
 <?php
 $home = isset($_GET['home_team']) ? $_GET['home_team'] : false;
@@ -113,7 +113,7 @@ printf ( $home, "        ");
   <br />
   </div>
   <div class="row center">
-    <a href="https://www.bet365.com/en/" id="download-button" class="btn-large waves-effect waves-light">Bet</a>
+    <a href="https://www.oddsshark.com/nba/detroit-indiana-odds-april-1-2019-1032253" id="download-button" class="btn-large waves-effect waves-light">Bet</a>
   </div>
     </div>
   </div>
