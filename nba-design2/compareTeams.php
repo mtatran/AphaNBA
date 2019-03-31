@@ -81,8 +81,8 @@ printf ( $home);
                 $date_time = isset($_GET['date_time']) ? $_GET['date_time'] : false;
 
                 if($date_time){
-                echo date_format($date_time,"Y/m/d H:i:s");
-                //printf ($date_time);
+                date(DATE_RFC850);
+                printf ($date_time);
                 printf (" EST");
 
                 }?></h5>
