@@ -77,7 +77,7 @@ printf ( $home);
 
           }
           ?>
-          ,       <?php
+                <?php
                 $date_time = isset($_GET['date_time']) ? $_GET['date_time'] : false;
                 echo date_format($date_time, 'g:ia \o\n l jS F Y');
                 ?></h5>
