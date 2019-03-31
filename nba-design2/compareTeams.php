@@ -224,7 +224,7 @@ printf ( $home);
               $PT = $row[team_3P_percent];
            }
            echo '<p>';
-           echo "<font size='8' face='Arial'>";
+           echo "<font size='3' face='Arial'>";
            printf ('Win: %s', $win);
            printf (' - Loss: %s', $loss);
            echo '<br>';
@@ -453,7 +453,7 @@ printf ( $home);
                    $PT = $row[team_3P_percent];
                 }
                 echo '<p>';
-                echo "<font size='8' face='Arial'>";
+                echo "<font size='3' face='Arial'>";
                 printf ('Win: %s', $win);
                 printf (' - Loss: %s', $loss);
                 echo '<br>';
