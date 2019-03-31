@@ -93,7 +93,7 @@ h1{
 }
 
 .active, .collapsible:hover {
-  background-color: grey;
+  background-color: white;
 }
 
 .content {

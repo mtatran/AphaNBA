@@ -621,7 +621,7 @@ printf ( $home);
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Index Information</h5>
+          <h5 class="white-text">Glossary of Terms</h5>
 
           <a href="https://mansci-db.uwaterloo.ca/~r2abdall/nba-design2/learnMore.php">Learn More</a>
 
