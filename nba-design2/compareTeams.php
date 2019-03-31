@@ -228,6 +228,7 @@ printf ( $home);
            printf ('Win: %s', $win);
            printf (' - Loss: %s', $loss);
            echo '<br>';
+           echo '%';
            printf('Games Played: %s', $played);
            echo '<br>';
            printf('Team Points: %s', $points);
