@@ -81,7 +81,7 @@ printf ( $home);
                 $date_time = isset($_GET['date_time']) ? $_GET['date_time'] : false;
 
                 if($date_time){
-                date(DATE_RFC850);
+                echo date(DATE_RFC850);
                 printf ($date_time);
                 printf (" EST");
 
