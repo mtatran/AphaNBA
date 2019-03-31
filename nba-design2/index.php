@@ -34,61 +34,130 @@
 
     </nav>
 
-
     <div class="section no-pad-bot" id="index-banner">
 
-      <div class="row">
-        <div class="col s5 push-s5"><form action=''>
+          <div class="row">
+            <div class="col s12"><h1>Basketball Events Near N1K(36)</h1></div>
+            <div class="col s3">
 
-         <label>Select by Teams:</label>
-         <select class="browser-default" multiple>
-           <option value="1">Option 1</option>
-           <option value="2">Option 2</option>
-           <option value="3">Option 3</option>
-           <option value="4">Option 1</option>
-           <option value="5">Option 2</option>
-           <option value="6">Option 3</option>
-           <option value="7">Option 1</option>
-           <option value="8">Option 2</option>
-           <option value="9">Option 3</option>
-           <option value="10">Option 1</option>
-           <option value="11">Option 2</option>
-           <option value="12">Option 3</option>
-           <option value="13">Option 1</option>
-           <option value="14">Option 2</option>
-           <option value="15">Option 3</option>
-           <option value="16">Option 1</option>
-           <option value="17">Option 2</option>
-           <option value="18">Option 3</option>
-           <option value="19">Option 1</option>
-           <option value="20">Option 2</option>
-           <option value="21">Option 3</option>
-           <option value="22">Option 1</option>
-           <option value="23">Option 2</option>
-           <option value="24">Option 3</option>
-           <option value="25">Option 2</option>
-           <option value="26">Option 3</option>
-           <option value="27">Option 2</option>
-           <option value="28">Option 3</option>
-           <option value="29">Option 3</option>
-           <option value="30">Option 9</option>
-         </select>
-        </div>
-        <div class="col s5 pull-s5 centered"> <button type="submit"class="waves-effect waves-light btn-small centered">submit</button>
-        </div>
+                       <select class="browser-default">
+                         <option value="1">Basketball</option>
+                         <option value="2">Option 2</option>
+                         <option value="3">Option 3</option>
+                         <option value="4">Option 1</option>
+                         <option value="5">Option 2</option>
+                         <option value="6">Option 3</option>
+                         <option value="7">Option 1</option>
+                         <option value="8">Option 2</option>
+                         <option value="9">Option 3</option>
+                         <option value="10">Option 1</option>
+                         <option value="11">Option 2</option>
+                         <option value="12">Option 3</option>
+                         <option value="13">Option 1</option>
+                         <option value="14">Option 2</option>
+                         <option value="15">Option 3</option>
+                         <option value="16">Option 1</option>
+                         <option value="17">Option 2</option>
+                         <option value="18">Option 3</option>
+                         <option value="19">Option 1</option>
+                         <option value="20">Option 2</option>
+                         <option value="21">Option 3</option>
+                         <option value="22">Option 1</option>
+                         <option value="23">Option 2</option>
+                         <option value="24">Option 3</option>
+                         <option value="25">Option 2</option>
+                         <option value="26">Option 3</option>
+                         <option value="27">Option 2</option>
+                         <option value="28">Option 3</option>
+                         <option value="29">Option 3</option>
+                         <option value="30">Option 9</option>
+                         <option value="30">Option 1</option>
+                       </select>
+
+                   </form>
+</div>
+            <div class="col s3">
+                     <select class="browser-default">
+                       <option value="1">All Dates</option>
+                       <option value="2">Option 2</option>
+                       <option value="3">Option 3</option>
+                       <option value="4">Option 1</option>
+                       <option value="5">Option 2</option>
+                       <option value="6">Option 3</option>
+                       <option value="7">Option 1</option>
+                       <option value="8">Option 2</option>
+                       <option value="9">Option 3</option>
+                       <option value="10">Option 1</option>
+                       <option value="11">Option 2</option>
+                       <option value="12">Option 3</option>
+                       <option value="13">Option 1</option>
+                       <option value="14">Option 2</option>
+                       <option value="15">Option 3</option>
+                       <option value="16">Option 1</option>
+                       <option value="17">Option 2</option>
+                       <option value="18">Option 3</option>
+                       <option value="19">Option 1</option>
+                       <option value="20">Option 2</option>
+                       <option value="21">Option 3</option>
+                       <option value="22">Option 1</option>
+                       <option value="23">Option 2</option>
+                       <option value="24">Option 3</option>
+                       <option value="25">Option 2</option>
+                       <option value="26">Option 3</option>
+                       <option value="27">Option 2</option>
+                       <option value="28">Option 3</option>
+                       <option value="29">Option 3</option>
+                       <option value="30">Option 9</option>
+                       <option value="30">Option 1</option>
+                     </select>
+
+                 </form>
+</div>
+            <div class="col s3">
+                     <select class="browser-default">
+                       <option value="1">Distance</option>
+                       <option value="2">Option 2</option>
+                       <option value="3">Option 3</option>
+                       <option value="4">Option 1</option>
+                       <option value="5">Option 2</option>
+                       <option value="6">Option 3</option>
+                       <option value="7">Option 1</option>
+                       <option value="8">Option 2</option>
+                       <option value="9">Option 3</option>
+                       <option value="10">Option 1</option>
+                       <option value="11">Option 2</option>
+                       <option value="12">Option 3</option>
+                       <option value="13">Option 1</option>
+                       <option value="14">Option 2</option>
+                       <option value="15">Option 3</option>
+                       <option value="16">Option 1</option>
+                       <option value="17">Option 2</option>
+                       <option value="18">Option 3</option>
+                       <option value="19">Option 1</option>
+                       <option value="20">Option 2</option>
+                       <option value="21">Option 3</option>
+                       <option value="22">Option 1</option>
+                       <option value="23">Option 2</option>
+                       <option value="24">Option 3</option>
+                       <option value="25">Option 2</option>
+                       <option value="26">Option 3</option>
+                       <option value="27">Option 2</option>
+                       <option value="28">Option 3</option>
+                       <option value="29">Option 3</option>
+                       <option value="30">Option 9</option>
+                       <option value="30">Option 1</option>
+                     </select>
+
+                 </form>
+</div>
+            <div class="col s3">
+
+                     <a href="" align-right>reset filters</a>
+</div>
           </div>
-
-
-
+      <form action=''>
       <div class="container centered centered-align">
-        <table align="center" class="highlight center-align">
-            <tr>
-                <th>Date</th>
-                <th>Location</th>
-                <th>Visitor</th>
-                <th>Home</th>
-                <th>Compare</th>
-            </tr>
+        <table align="center" class="highlight center-align" style="width:100%">
 
             <?php
 
@@ -101,15 +170,28 @@
                  <!-- populate with names of columns in mysql database -->
                  <td><?php echo $row[date_time];?></td>
 
-                 <td><?php echo $row[game_location];?></td>
+                 <td><?php
 
-                 <td><?php echo $row[visitor_team];?></td>
-                 <td><?php echo $row[home_team];?></td>
+                 printf ($row[visitor_team]);
+                 printf (' vs. %s',$row[home_team]);
+
+                 ?></td>
+
+                 <td><?php echo $row[game_location];?></td>
+                  <td>
+
+                  <?php echo
+                    "
+                      <a class='waves-effect waves-light blue accent-3 btn modal-trigger'
+                      href=''>Tickets</a>
+                    "
+                   ?>
+                 </td>
                  <td>
                    <?php echo
                     "
-                      <a class='waves-effect waves-light btn modal-trigger'
-                      href='compareTeams.php?date_time=".$row[date_time]."&game_location=".$row[game_location]."&visitor_team=".$row[visitor_team]."&home_team=".$row[home_team]."' target='_blank'>></a>
+                      <a class='waves-effect waves-light blue accent-3 btn modal-trigger'
+                      href='compareTeams.php?date_time=".$row[date_time]."&game_location=".$row[game_location]."&visitor_team=".$row[visitor_team]."&home_team=".$row[home_team]."' target='_blank'>compare</a>
                     "
                    ?>
                  </td>
@@ -122,16 +204,18 @@
    </div>
    </div>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-   var elems = document.querySelectorAll('select');
-   var instances = M.FormSelect.init(elems, options);
- });
 
- // Or with jQuery
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, options);
+  });
 
- $(document).ready(function(){
-   $('select').formSelect();
- });
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('select').formSelect();
+  });
+
        </script>
 
   <!--  Scripts-->
