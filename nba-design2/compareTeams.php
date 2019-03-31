@@ -51,16 +51,19 @@
 
        if($visitor){
         //  echo '<p>';
-        printf ($visitor);
+        printf ($visitor, "        ");
           //echo '</p>';
        }
 
-        ?> vs.
+        ?> 
+        <div centered>
+        Vs. 
+        </div>
 <?php
 $home = isset($_GET['home_team']) ? $_GET['home_team'] : false;
 if($home){
 //  echo '<p>';
-printf ( $home);
+printf ( $home, "        ");
   //echo '</p>';
 }
  ?>
@@ -72,7 +75,7 @@ printf ( $home);
 
 
           if($game_location) {
-
+          echo '<br>';
           printf ($game_location);
 
           }
