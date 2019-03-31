@@ -55,7 +55,6 @@
 
 }
 #download-button{
-
   background-color: #D00509;
 }
 .page-footer{
@@ -81,6 +80,29 @@ table{
 h1{
   font-size: 250%;
 }
+.collapsible {
+  background-color:white;
+  color: black;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: center;
+  padding : 18px;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: grey;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
 .table2{
-    width:100%;
+  width: 100%;
 }
