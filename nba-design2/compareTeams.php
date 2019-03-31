@@ -56,7 +56,7 @@
        }
 
         ?> 
-        <div style="display: inline; text-align:center">
+        <div style="display: inline; text-align:center;">
         VS.
         </div>
 <?php
