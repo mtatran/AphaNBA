@@ -234,7 +234,7 @@ printf ( $home);
            echo '<br>';
            printf ( 'FGA: %s', $FGA);
            printf (' | FGM: %s', $FGM);
-           printf (' | FG ','"%"',': %s', $FG);
+           printf (' | FG ','".%."',': %s', $FG);
            echo '<br>';
            printf ( 'FTA: %s', $FTA);
            printf (' | FTM: %s', $FTM);
