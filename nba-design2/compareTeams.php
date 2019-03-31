@@ -81,7 +81,7 @@ printf ( $home);
                 $date_time = isset($_GET['date_time']) ? $_GET['date_time'] : false;
 
                 if($date_time){
-                echo date(DATE_RFC850);
+                echo '$date_time, date(DATE_RFC850)';
 
                 }?></h5>
       </div>
