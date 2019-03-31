@@ -37,7 +37,7 @@
     <div class="section no-pad-bot" id="index-banner">
 
           <div class="row">
-            <div class="col s12"><h1>Basketball Events Near N1K(36)</h1></div>
+            <div class="col s12"><h5>Basketball Events Near N1K(36)</h5></div>
             <div class="col s3">
 
                        <select class="browser-default">
