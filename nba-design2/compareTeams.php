@@ -55,7 +55,10 @@
           //echo '</p>';
        }
 
-        ?> Vs.
+        ?> 
+        <div centered>
+        Vs. 
+        </div>
 <?php
 $home = isset($_GET['home_team']) ? $_GET['home_team'] : false;
 if($home){
