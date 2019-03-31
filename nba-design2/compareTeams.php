@@ -81,7 +81,7 @@ printf ( $home);
                 $date_time = isset($_GET['date_time']) ? $_GET['date_time'] : false;
 
                 if($date_time){
-                echo date_format($date_time,"DATE_RSS - RSS");
+                echo date_format($date_time,DATE_RSS - RSS);
                 //printf ($date_time);
                 printf (" EST");
 
