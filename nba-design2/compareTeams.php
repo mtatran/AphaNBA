@@ -81,9 +81,7 @@ printf ( $home);
                 $date_time = isset($_GET['date_time']) ? $_GET['date_time'] : false;
 
                 if($date_time){
-
-                printf ($date_time);
-                printf (" EST");
+                echo date(DATE_RFC850);
 
                 }?></h5>
       </div>
@@ -224,6 +222,7 @@ printf ( $home);
               $PT = $row[team_3P_percent];
            }
            echo '<p>';
+           echo "<font size='3' face='Arial'>";
            printf ('Win: %s', $win);
            printf (' - Loss: %s', $loss);
            echo '<br>';
@@ -232,16 +231,19 @@ printf ( $home);
            printf('Team Points: %s', $points);
            echo '<br>';
            printf ( 'FGA: %s', $FGA);
-           printf (' | FGM: %s', $FGM);
-           printf (' | FG Percent: %s', $FG);
+           printf ('   |   FGM: %s', $FGM);
+           printf ('   |   FG: %s', $FG);
+           echo '%';
            echo '<br>';
            printf ( 'FTA: %s', $FTA);
-           printf (' | FTM: %s', $FTM);
-           printf (' | FT Percent: %s', $FT);
+           printf ('   |   FTM: %s', $FTM);
+           printf ('   |   FT: %s', $FT);
+           echo '%';
            echo '<br>';
            printf ( '3PTA: %s', $PTA);
-           printf (' | 3PTM: %s', $PTM);
-           printf (' | 3PT Percent: %s', $PT);
+           printf ('   |   3PTM: %s', $PTM);
+           printf ('   |   3PT: %s', $PT);
+           echo '%';
            echo '</p>';
 
 ?>
@@ -452,6 +454,7 @@ printf ( $home);
                    $PT = $row[team_3P_percent];
                 }
                 echo '<p>';
+                echo "<font size='3' face='Arial'>";
                 printf ('Win: %s', $win);
                 printf (' - Loss: %s', $loss);
                 echo '<br>';
@@ -460,16 +463,19 @@ printf ( $home);
                 printf('Team Points: %s', $points);
                 echo '<br>';
                 printf ( 'FGA: %s', $FGA);
-                printf (' | FGM: %s', $FGM);
-                printf (' | FG Percent: %s', $FG);
+                printf ('   |   FGM: %s', $FGM);
+                printf ('   |   FG: %s', $FG);
+                echo '%';
                 echo '<br>';
                 printf ( 'FTA: %s', $FTA);
-                printf (' | FTM: %s', $FTM);
-                printf (' | FT Percent: %s', $FT);
+                printf ('   |   FTM: %s', $FTM);
+                printf ('   |   FT: %s', $FT);
+                echo '%';
                 echo '<br>';
                 printf ( '3PTA: %s', $PTA);
-                printf (' | 3PTM: %s', $PTM);
-                printf (' | 3PT Percent: %s', $PT);
+                printf ('   |   3PTM: %s', $PTM);
+                printf ('   |   3PT: %s', $PT);
+                echo '%';
                 echo '</p>';
          ?></h5>
          </div>
