@@ -79,7 +79,7 @@ printf ( $home);
           ?>
           ,      <?php
                 $date_time = isset($_GET['date_time']) ? $_GET['date_time'] : false;
-                date_create($date_time);
+                $date = date_create($date_time);
                 echo date_format($date, 'g:ia \o\n l jS F Y');
                 ?></h5>
       </div>
