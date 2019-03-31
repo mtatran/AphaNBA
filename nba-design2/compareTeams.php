@@ -82,7 +82,7 @@ printf ( $home);
 
                 if($date_time){
                 echo date(DATE_RFC850);
-                printf ($date_time);
+                //printf ($date_time);
                 printf (" EST");
 
                 }?></h5>
