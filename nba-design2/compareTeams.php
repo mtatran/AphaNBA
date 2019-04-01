@@ -73,11 +73,9 @@ printf ( $home, "        ");
           <?php
           $game_location = isset($_GET['game_location']) ? $_GET['game_location'] : false;
 
-
           if($game_location) {
           echo '<br>';
           printf ($game_location);
-
           }
           ?>
          <?php
@@ -99,29 +97,62 @@ printf ( $home, "        ");
           </div>
         </div>
 
+        <?php
+    //    session_start();
 
+      //  error_reporting(E_ALL ^ E_NOTICE);
+        // mysqli connection via user-defined function
+
+    //    include('./my_connect.php');
+        $mysqli = get_mysqli_conn();
+
+        //gets all users orders
+        $bets = "SELECT t.Spread_Team_A, t.Total_Top_Team_A, t.Total__Bottom_Team_A, t.Money_Team_A, t.Spread_Team_B, t.Total_Top_Team_B, t.Total__Bottom_Team_B, t.Money_Team_B FROM teamgame t WHERE t.date_time = '2019-04-10 10:30:00' AND t.game_location='Portland Trail'";
+        $search_resultb = mysqli_query($mysqli, $bets);
+
+        //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
+        ?>
         <table class="striped" style>
-    <tbody>
-      <tr>
-        <td>+100</td>
-        <td>+100</td>
-        <td>-50</td>
-        <td>-50</td>
-      </tr>
-      <tr>
-        <td>+100</td>
-        <td>+100</td>
-        <td>-50</td>
-        <td>-50</td>
-      </tr>
-      <tr>
-        <td>+100</td>
-        <td>+100</td>
-        <td>-50</td>
-        <td>-50</td>
-      </tr>
-    </tbody>
-  </table>
+          <table align="center" class="highlight center-align" style="width:100%">
+
+              <?php
+
+              $sum=0;
+
+              ?>
+              <!-- populate table from mysql database -->
+              <?php while($row = mysqli_fetch_array($search_resultb)):?>
+                  <tr>
+                   <!-- populate with names of columns in mysql database -->
+                  <?php
+                   $visitor_team = isset($_GET['visitor_team']) ? $_GET['visitor_team'] : false;
+                 printf ($visitor_team);
+                 ?>
+
+                   <td><?php echo $row[Spread_Team_A];?></td>
+
+                   <td><?php
+
+                   printf ($row[Total_Top_Team_A]);
+                   printf ($row[Total__Bottom_Team_A]);
+                   ?></td>
+                   <td><?php echo $row[Money_Team_A];?></td>
+
+                  <?php
+
+                   $home_team = isset($_GET['home_team']) ? $_GET['home_team'] : false;
+                   printf ($home_team);
+
+                   ?>
+                   <td><?php echo $row[Total_Top_Team_B];?></td>
+                   <td><?php echo $row[Total__Bottom_Team_B];?></td>
+                   <td><?php echo $row[Money_Team_B];?></td>
+
+               </tr>
+
+           <?php endwhile;?>
+
+          </table>
   <br />
   </div>
   <div class="row center">
@@ -627,9 +658,7 @@ printf ( $home, "        ");
                  </div>
          </div>
        </div>
-<p>
-  hello
-</p>
+
 
 <a class="btn-floating btn-large pulse" href="https://mansci-db.uwaterloo.ca/~r2abdall/nba-design2/news.php" >News</a>
 
