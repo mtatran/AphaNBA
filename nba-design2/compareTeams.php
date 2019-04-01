@@ -122,34 +122,62 @@ printf ( $home, "        ");
               ?>
               <!-- populate table from mysql database -->
               <?php while($row = mysqli_fetch_array($search_resultb)):?>
-                  <tr>
+
                    <!-- populate with names of columns in mysql database -->
-                  <?php
-                   $visitor_team = isset($_GET['visitor_team']) ? $_GET['visitor_team'] : false;
-                 printf ($visitor_team);
-                 ?>
 
-                   <td><?php echo $row[Spread_Team_A];?></td>
+                   <center>
+                   <table style="width:70%">
+                     <tr>
+   <th>Team</th>
+   <th>Spread</th>
+   <th>Total</th>
+   <th>Money</th>
+ </tr>
 
-                   <td><?php
+ <tr>
+  <b> <td>   <?php
+      $visitor_team = isset($_GET['visitor_team']) ? $_GET['visitor_team'] : false;
+    printf ($visitor_team);
+    ?> </b>
 
-                   printf ($row[Total_Top_Team_A]);
-                   printf ($row[Total__Bottom_Team_A]);
-                   ?></td>
-                   <td><?php echo $row[Money_Team_A];?></td>
+  </td>
+   <td>Random Number</td>
+   <td><?php echo ($row[Total_Top_Team_A]);?> </td>
+   <td> + </td>
+ </tr>
 
-                  <?php
 
-                   $home_team = isset($_GET['home_team']) ? $_GET['home_team'] : false;
-                   printf ($home_team);
+ <tr>
+    <td>O</td>
+    <td><?php echo $row[Spread_Team_A];?> </td>
+    <td> <?php printf ($row[Total__Bottom_Team_A]); ?></td>
+    <td> <?php echo $row[Money_Team_A];?>  </td>
+  </tr>
 
-                   ?>
-                   <td><?php echo $row[Total_Top_Team_B];?></td>
-                   <td><?php echo $row[Total__Bottom_Team_B];?></td>
-                   <td><?php echo $row[Money_Team_B];?></td>
+  <tr> <b>
+  <td>   <?php
 
-               </tr>
+$home_team = isset($_GET['home_team']) ? $_GET['home_team'] : false;
+     printf ($home_team);
 
+     ?> </b>
+    </td>
+  <td>Random Number</td>
+  <td><?php echo $row[Total_Top_Team_B];?></td>
+  <td> - </td>
+
+</tr>
+
+<tr>
+  <td> U </td>
+  <td> <?php echo $row[Spread_Team_B];?> </td>
+  <td><?php echo $row[Total__Bottom_Team_B];?> </td>
+  <td> <?php echo $row[Money_Team_B];?> </td>
+</tr>
+
+</center>
+
+</table>
            <?php endwhile;?>
 
           </table>
