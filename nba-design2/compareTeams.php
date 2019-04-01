@@ -105,9 +105,11 @@ printf ( $home, "        ");
 
     //    include('./my_connect.php');
         $mysqli = get_mysqli_conn();
+        $game_location = isset($_GET['game_location']) ? $_GET['game_location'] : false;
+        $date_time = isset($_GET['date_time']) ? $_GET['date_time'] : false;
 
         //gets all users orders
-        $bets = "SELECT t.Spread_Team_A, t.Total_Top_Team_A, t.Total__Bottom_Team_A, t.Money_Team_A, t.Spread_Team_B, t.Total_Top_Team_B, t.Total__Bottom_Team_B, t.Money_Team_B FROM teamgame t WHERE t.date_time = '2019-04-10 10:30:00' AND t.game_location='Portland Trail'";
+        $bets = "SELECT t.Spread_Team_A, t.Total_Top_Team_A, t.Total__Bottom_Team_A, t.Money_Team_A, t.Spread_Team_B, t.Total_Top_Team_B, t.Total__Bottom_Team_B, t.Money_Team_B FROM teamgame t WHERE t.date_time = '".$date_time."' AND t.game_location='".$game_location."'";
         $search_resultb = mysqli_query($mysqli, $bets);
 
         //echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
@@ -136,33 +138,54 @@ printf ( $home, "        ");
 
  <tr>
   <b> <td>   <?php
-      $visitor_team = isset($_GET['visitor_team']) ? $_GET['visitor_team'] : false;
-    printf ($visitor_team);
+    $visitor_team = isset($_GET['visitor_team']) ? $_GET['visitor_team'] : false;
+    printf ('%s',$visitor_team);
     ?> </b>
 
   </td>
-   <td>Random Number</td>
-   <td><?php echo ($row[Total_Top_Team_A]);?> </td>
-   <td> + </td>
- </tr>
+   <td>
+     <?php
+  $spread = round(rand(1,12));
+  printf(' + %s',$spread);
+
+  echo "</td>";
+  echo "<td>";
+  printf ('%s',$row[Total_Top_Team_A]);
+  echo "</td>";
+  echo "<td>";
+  echo "+";
+  echo "</td>";
+  echo "</tr>";
+
+  echo "<tr>";
+  echo "<td>";
+  echo "0";
+  echo "</td>";
+  echo" <td>";
+
+  printf ('%s',$row[Spread_Team_A]);
+
+  echo "</td>";
+  echo "<td>";
+  printf ('%s',$row[Total__Bottom_Team_A]);
+  echo "</td>";
+  echo "<td>";
+  printf ('%s',$row[Money_Team_A]);
+  echo "</td>";
+  echo "</tr>";
+  echo "<tr>";
+  echo "<td> ";
+
+    $home_team = isset($_GET['home_team']) ? $_GET['home_team'] : false;
+    printf ('%s',$home_team);
 
 
- <tr>
-    <td>O</td>
-    <td><?php echo $row[Spread_Team_A];?> </td>
-    <td> <?php printf ($row[Total__Bottom_Team_A]); ?></td>
-    <td> <?php echo $row[Money_Team_A];?>  </td>
-  </tr>
+  echo "</td>";
+  echo "<td>";
+  printf('- %s',$spread);
+  ?>
 
-  <tr> <b>
-  <td>   <?php
-
-$home_team = isset($_GET['home_team']) ? $_GET['home_team'] : false;
-     printf ($home_team);
-
-     ?> </b>
-    </td>
-  <td>Random Number</td>
+  </td>
   <td><?php echo $row[Total_Top_Team_B];?></td>
   <td> - </td>
 
@@ -688,14 +711,18 @@ $home_team = isset($_GET['home_team']) ? $_GET['home_team'] : false;
        </div>
 
 
-<a class="btn-floating btn-large pulse" href="https://mansci-db.uwaterloo.ca/~r2abdall/nba-design2/news.php" >News</a>
 
 
        </div>
 </div>
+<center>
+
+<a class="btn-floating btn-large pulse" href="https://mansci-db.uwaterloo.ca/~r2abdall/nba-design2/news.php" >News</a>
+</center>
+
     </div>
     <br><br>
-  </div>
+
 
 
   <footer class="page-footer">
